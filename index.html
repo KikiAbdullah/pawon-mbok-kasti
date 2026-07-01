@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Pawon Mbok Kasti - Prasmanan Jawa & Cafe di Pandaan, Pasuruan</title>
+    <meta
+      name="description"
+      content="Restoran dan cafe bernuansa Joglo vintage di Pandaan, Pasuruan. Menyajikan Prasmanan Jawa berganti tiap hari, Wedang tradisional, kopi, dan live music syahdu!"
+    />
+    <meta
+      name="keywords"
+      content="kuliner pandaan, prasmanan jawa, cafe pandaan, live music pandaan, pawon mbok kasti, rumah makan pasuruan, joglo pandaan"
+    />
+    <meta name="author" content="Pawon Mbok Kasti" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pawonmbokkasti.com/" />
+    <meta
+      property="og:title"
+      content="Pawon Mbok Kasti - Prasmanan Jawa & Cafe di Pandaan"
+    />
+    <meta
+      property="og:description"
+      content="Rasakan kehangatan masakan rumahan khas Jawa dalam suasana Joglo vintage yang instagramable dan ramah keluarga."
+    />
+    <meta
+      property="og:image"
+      content="https://picsum.photos/1200/630?random=100"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pawonmbokkasti.com/" />
+    <meta
+      property="twitter:title"
+      content="Pawon Mbok Kasti - Prasmanan Jawa & Cafe"
+    />
+    <meta
+      property="twitter:description"
+      content="Restoran Joglo estetik dengan masakan prasmanan tradisional, kopi khas, dan event musik mingguan."
+    />
+    <meta
+      property="twitter:image"
+      content="https://picsum.photos/1200/630?random=100"
+    />
+
+    <!-- Google Fonts (Playfair Display & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3D2314",
+              "primary-light": "#5C3D2E",
+              gold: "#C89D4A",
+              "gold-light": "#E8D5A3",
+              cream: "#FDF8F0",
+              "cream-dark": "#F0E8D8",
+              dark: "#1A110A",
+              charcoal: "#2C1E14",
+              "text-light": "#6B5A4A",
+              green: "#4A7C59",
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "Georgia", "serif"],
+              sans: [
+                "Inter",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Styles for Features Not Covered by Tailwind CDN -->
+    <style>
+      :root {
+        --color-primary: #3d2314;
+        --color-primary-light: #5c3d2e;
+        --color-gold: #c89d4a;
+        --color-gold-light: #e8d5a3;
+        --color-cream: #fdf8f0;
+        --color-cream-dark: #f0e8d8;
+        --color-white: #ffffff;
+        --color-dark: #1a110a;
+        --color-text: #2c1e14;
+        --color-text-light: #6b5a4a;
+        --color-green: #4a7c59;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-cream);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-primary-light);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-gold);
+      }
+
+      /* Skip Link for Accessibility */
+      .skip-link:focus {
+        top: 10px;
+        left: 10px;
+        z-index: 10000;
+      }
+
+      /* Hero Slideshow Overlay Transitions */
+      .hero-slide {
+        transition: opacity 1.2s ease-in-out;
+      }
+
+      /* Active Link Styling */
+      .nav-link.active {
+        color: var(--color-gold);
+        font-weight: 600;
+      }
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      /* Pulse animation for Live/Open badge */
+      .pulse-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #4a7c59;
+        margin-right: 6px;
+        animation: pulse 1.8s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(74, 124, 89, 0.7);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 8px rgba(74, 124, 89, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(74, 124, 89, 0);
+        }
+      }
+
+      /* Error Message style */
+      .field-error-msg {
+        color: #c0392b;
+        font-size: 0.825rem;
+        margin-top: 4px;
+        font-weight: 500;
+      }
+      .is-invalid {
+        border-color: #c0392b !important;
+        background-color: #fdf2f2 !important;
+      }
+    </style>
+
+    <!-- Google Analytics 4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <!-- Structured Data JSON-LD Schemas -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Restaurant",
+            "@id": "https://pawonmbokkasti.com/#restaurant",
+            "name": "Pawon Mbok Kasti",
+            "description": "Prasmanan Jawa dan Cafe bernuansa Joglo vintage di Pandaan, Pasuruan.",
+            "image": "https://picsum.photos/800/600?random=11",
+            "telephone": "+6282342707766",
+            "url": "https://pawonmbokkasti.com/",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Mangga 1, Klangkung, Nogosari",
+              "addressLocality": "Pandaan",
+              "addressRegion": "Pasuruan, Jawa Timur",
+              "postalCode": "67156",
+              "addressCountry": "ID"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "-7.640243",
+              "longitude": "112.695304"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "08:00",
+                "closes": "23:00"
+              }
+            ],
+            "menu": "https://pawonmbokkasti.com/#menu",
+            "servesCuisine": ["Javanese", "Indonesian"],
+            "priceRange": "$$"
+          },
+          {
+            "@type": "Event",
+            "@id": "https://pawonmbokkasti.com/#event-classic-vibes",
+            "name": "The Classic Vibes",
+            "description": "Event musik mingguan membawakan tembang legendaris era 80-an, 90-an, dan 2000-an.",
+            "startDate": "2026-07-04T19:00:00+07:00",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+            "location": {
+              "@type": "Place",
+              "name": "Pawon Mbok Kasti",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Jl. Mangga 1, Klangkung, Nogosari",
+                "addressLocality": "Pandaan",
+                "addressRegion": "Pasuruan, Jawa Timur",
+                "postalCode": "67156",
+                "addressCountry": "ID"
+              }
+            },
+            "image": "https://picsum.photos/800/600?random=19",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2026-07-01T00:00:00+07:00"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-cream text-charcoal font-sans antialiased overflow-x-hidden">
+    <!-- Accessibility Skip Link -->
+    <a
+      href="#beranda"
+      class="skip-link absolute -top-40 left-0 bg-gold text-primary font-semibold px-4 py-2 transition-all"
+      >Lewati ke Konten Utama</a
+    >
+
+    <!-- ==================== HEADER SECTION ==================== -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full h-[76px] bg-white/90 backdrop-blur-md z-50 border-b border-primary/10 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between"
+      >
+        <!-- Brand Logo -->
+        <a href="#beranda" class="flex flex-col select-none group">
+          <span
+            class="font-serif text-2xl md:text-3xl font-bold text-primary tracking-tight leading-none group-hover:text-gold transition"
+            >Pawon</span
+          >
+          <span
+            class="font-serif text-sm italic font-semibold text-gold tracking-wider leading-none self-end"
+            >Mbok Kasti</span
+          >
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav
+          class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm text-primary-light"
+        >
+          <a
+            href="#beranda"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Beranda</a
+          >
+          <a
+            href="#menu"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Menu</a
+          >
+          <a
+            href="#event"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Event</a
+          >
+          <a
+            href="#tentang"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Tentang</a
+          >
+          <a
+            href="#galeri"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Galeri</a
+          >
+          <a
+            href="#karir"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Karir</a
+          >
+          <a
+            href="#kontak"
+            class="nav-link relative py-2 hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+            >Kontak</a
+          >
+        </nav>
+
+        <!-- Right Side Actions (Status & CTA) -->
+        <div class="hidden sm:flex items-center gap-4">
+          <!-- Realtime Status Indicator -->
+          <span
+            id="status-badge"
+            class="px-3 py-1 rounded-full text-xs font-semibold flex items-center shadow-sm"
+          ></span>
+          <!-- CTA Reservasi -->
+          <a
+            href="#reservasi"
+            class="bg-gold hover:bg-primary hover:text-gold-light text-primary font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all text-sm"
+          >
+            <i class="fa-solid fa-calendar-check mr-1.5"></i> Reservasi
+          </a>
+        </div>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          id="menu-toggle"
+          aria-label="Toggle Navigation Menu"
+          class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-full bg-cream hover:bg-cream-dark transition-all duration-200"
+        >
+          <span
+            class="bar w-5 h-[2px] bg-primary rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="bar w-5 h-[2px] bg-primary rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="bar w-5 h-[2px] bg-primary rounded-full transition-all duration-300"
+          ></span>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden fixed top-[76px] left-full w-full h-[calc(100vh-76px)] bg-white/95 backdrop-blur-lg border-t border-primary/5 transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-6 text-xl font-medium text-primary shadow-inner z-40"
+      >
+        <a href="#beranda" class="mobile-nav-link hover:text-gold transition"
+          >Beranda</a
+        >
+        <a href="#menu" class="mobile-nav-link hover:text-gold transition"
+          >Menu</a
+        >
+        <a href="#event" class="mobile-nav-link hover:text-gold transition"
+          >Event</a
+        >
+        <a href="#tentang" class="mobile-nav-link hover:text-gold transition"
+          >Tentang Kami</a
+        >
+        <a href="#galeri" class="mobile-nav-link hover:text-gold transition"
+          >Galeri</a
+        >
+        <a href="#karir" class="mobile-nav-link hover:text-gold transition"
+          >Karir</a
+        >
+        <a href="#kontak" class="mobile-nav-link hover:text-gold transition"
+          >Kontak</a
+        >
+
+        <!-- Mobile Status Badge & CTA -->
+        <div class="flex flex-col items-center gap-4 mt-6">
+          <span
+            id="status-badge-mobile"
+            class="px-4 py-1.5 rounded-full text-sm font-semibold flex items-center shadow-sm"
+          ></span>
+          <a
+            href="#reservasi"
+            class="bg-gold text-primary font-semibold px-8 py-3 rounded-full shadow-md text-base flex items-center gap-2"
+          >
+            <i class="fa-solid fa-calendar-check"></i> Reservasi Sekarang
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section
+      id="beranda"
+      class="relative h-screen w-full flex items-center justify-center text-center overflow-hidden"
+    >
+      <!-- Autoplay Slideshow Containers -->
+      <div class="absolute inset-0 w-full h-full z-0">
+        <!-- Slide 1 (Interior Joglo) -->
+        <div
+          class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-100 active z-0"
+          style="
+            background-image: url('https://picsum.photos/1920/1080?random=11');
+          "
+        ></div>
+        <!-- Slide 2 (Makanan Prasmanan) -->
+        <div
+          class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-0 z-0"
+          style="
+            background-image: url('https://picsum.photos/1920/1080?random=15');
+          "
+        ></div>
+        <!-- Slide 3 (Live Music) -->
+        <div
+          class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-0 z-0"
+          style="
+            background-image: url('https://picsum.photos/1920/1080?random=19');
+          "
+        ></div>
+
+        <!-- Gradient Dark Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-dark/60 z-10"
+        ></div>
+      </div>
+
+      <!-- Content Overlaid -->
+      <div
+        class="relative max-w-4xl mx-auto px-6 z-20 mt-16 text-white flex flex-col items-center gap-4 md:gap-6"
+      >
+        <span
+          class="font-serif italic text-gold text-lg md:text-2xl font-semibold tracking-wide animate-pulse"
+          >Prasmanan Jawa & Coffee Shop</span
+        >
+        <h1
+          class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-md"
+        >
+          Pawon Mbok Kasti
+        </h1>
+        <p
+          class="font-serif text-lg sm:text-xl md:text-2xl text-cream-dark max-w-2xl leading-relaxed italic drop-shadow-sm font-medium"
+        >
+          &ldquo;Mau makan? Bisa. Ngopi saja? Bisa. Atau makan, ngopi ditemani
+          live music? Bisa banget!&rdquo;
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full justify-center"
+        >
+          <a
+            href="#reservasi"
+            class="w-full sm:w-auto bg-gold hover:bg-primary hover:text-gold text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fa-solid fa-calendar-check"></i> Reservasi Meja
+          </a>
+          <a
+            href="#menu"
+            class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-full shadow-md hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fa-solid fa-utensils"></i> Lihat Menu Kami
+          </a>
+        </div>
+      </div>
+
+      <!-- Slideshow Nav Dots -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        <button
+          class="hero-dot w-3 h-3 rounded-full bg-white/40 active"
+          aria-label="Go to slide 1"
+        ></button>
+        <button
+          class="hero-dot w-3 h-3 rounded-full bg-white/40"
+          aria-label="Go to slide 2"
+        ></button>
+        <button
+          class="hero-dot w-3 h-3 rounded-full bg-white/40"
+          aria-label="Go to slide 3"
+        ></button>
+      </div>
+    </section>
+
+    <!-- ==================== HIGHLIGHTS SECTION ==================== -->
+    <section
+      id="highlights"
+      class="py-16 md:py-24 bg-cream-dark/40 relative border-b border-primary/5"
+    >
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Section Intro -->
+        <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          <h2
+            class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mb-4"
+          >
+            Mengapa Memilih Kami?
+          </h2>
+          <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-4"></div>
+          <p class="text-text-light font-medium">
+            Kami mengutamakan kesederhanaan rasa tradisional yang dipadukan
+            dengan kenyamanan modern masa kini.
+          </p>
+        </div>
+
+        <!-- Grid of Highlights -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+        >
+          <!-- Highlight 1: Prasmanan Jawa -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-primary/5 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 group text-center"
+          >
+            <div
+              class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto text-gold group-hover:bg-primary group-hover:text-gold-light transition duration-300 mb-6 shadow-inner"
+            >
+              <i class="fa-solid fa-bowl-food text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-primary mb-3">
+              Prasmanan Jawa
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Menu rumahan khas Jawa tulen yang berganti setiap hari, menjamin
+              kesegaran dan cita rasa autentik di setiap suapan.
+            </p>
+          </div>
+
+          <!-- Highlight 2: Live Music -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-primary/5 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 group text-center"
+          >
+            <div
+              class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto text-gold group-hover:bg-primary group-hover:text-gold-light transition duration-300 mb-6 shadow-inner"
+            >
+              <i class="fa-solid fa-music text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-primary mb-3">
+              Live Music
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Nikmati pertunjukan musik akhir pekan bertema klasik untuk
+              menemani waktu santap dan berkumpul Anda.
+            </p>
+          </div>
+
+          <!-- Highlight 3: Work From Cafe -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-primary/5 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 group text-center"
+          >
+            <div
+              class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto text-gold group-hover:bg-primary group-hover:text-gold-light transition duration-300 mb-6 shadow-inner"
+            >
+              <i class="fa-solid fa-laptop text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-primary mb-3">
+              Work From Cafe
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Dilengkapi koneksi Wi-Fi super cepat serta stop kontak melimpah di
+              setiap sudut tempat duduk demi kenyamanan kerja Anda.
+            </p>
+          </div>
+
+          <!-- Highlight 4: Instagramable Spot -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-primary/5 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 group text-center"
+          >
+            <div
+              class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto text-gold group-hover:bg-primary group-hover:text-gold-light transition duration-300 mb-6 shadow-inner"
+            >
+              <i class="fa-solid fa-camera text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-primary mb-3">
+              Instagramable Spot
+            </h3>
+            <p class="text-text-light text-sm leading-relaxed">
+              Setiap sudut dipoles dengan estetika Joglo klasik khas yang
+              mempesona, siap menjadi latar foto estetik Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MENU SECTION ==================== -->
+    <section id="menu" class="py-16 md:py-24 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Section Intro -->
+        <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
+          <h2
+            class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mb-4"
+          >
+            Hidangan Favorit Kami
+          </h2>
+          <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-4"></div>
+          <p class="text-text-light font-medium">
+            Bahan segar pilihan yang diramu dengan dedikasi bumbu warisan
+            keluarga legendaris.
+          </p>
+        </div>
+
+        <!-- Filter Controls & Search -->
+        <div
+          class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8 pb-4 border-b border-primary/5"
+        >
+          <!-- Filter Tabs -->
+          <div
+            class="flex flex-wrap items-center justify-center gap-2 md:gap-3"
+          >
+            <button
+              class="filter-btn active px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-primary text-white hover:bg-primary-light transition-all"
+              data-category="Semua"
+            >
+              Semua
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+              data-category="Prasmanan"
+            >
+              Prasmanan
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+              data-category="Makanan"
+            >
+              Makanan
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+              data-category="Minuman"
+            >
+              Minuman
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+              data-category="Camilan"
+            >
+              Camilan
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative w-full md:w-72">
+            <input
+              type="text"
+              id="menu-search"
+              placeholder="Cari hidangan favorit..."
+              class="w-full px-4 py-2.5 pl-10 rounded-full border border-primary/15 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-gold transition-all"
+            />
+            <span
+              class="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-light text-sm"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Menu Grid (Populated Dynamically) -->
+        <div
+          id="menu-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 min-h-[400px]"
+        >
+          <!-- JS dynamically renders menu cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EVENT SECTION ==================== -->
+    <section
+      id="event"
+      class="relative py-24 bg-cover bg-center text-white"
+      style="background-image: url('https://picsum.photos/1920/800?random=19')"
+    >
+      <!-- Overlay gradien gelap -->
+      <div class="absolute inset-0 bg-black/75 z-0"></div>
+
+      <div
+        class="relative max-w-4xl mx-auto px-6 text-center z-10 flex flex-col items-center gap-6"
+      >
+        <span
+          class="font-serif italic text-gold text-lg md:text-2xl font-semibold tracking-widest uppercase"
+          >Setiap Hari Sabtu Mulai Jam 19:00 WIB</span
+        >
+        <h2
+          class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight drop-shadow-md"
+        >
+          The Classic Vibes
+        </h2>
+        <div class="w-20 h-1 bg-gold rounded-full mb-2"></div>
+        <p
+          class="font-serif text-lg md:text-xl text-cream-dark max-w-2xl leading-relaxed italic"
+        >
+          &ldquo;Mari Makan, Ngopi, Berdansa, Bernyanyi bersama...&rdquo; 🤟
+        </p>
+        <p class="text-sm md:text-base text-gray-300 max-w-lg leading-relaxed">
+          Bernostalgia bersama di Pawon Mbok Kasti! Nikmati tembang-tembang
+          legendaris era 80-an, 90-an, hingga 2000-an yang dibawakan secara apik
+          dan interaktif oleh band pilihan.
+        </p>
+
+        <button
+          onclick="orderDirect('Event Classic Vibes')"
+          class="bg-gold hover:bg-white hover:text-primary text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2 mt-4 text-sm md:text-base"
+        >
+          <i class="fa-solid fa-calendar-days"></i> Reservasi Tempat Duduk
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== TENTANG KAMI SECTION ==================== -->
+    <section id="tentang" class="py-16 md:py-24 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Image Layout -->
+          <div class="lg:col-span-5 relative">
+            <div
+              class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gold rounded-tl-3xl z-0"
+            ></div>
+            <div
+              class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-primary rounded-br-3xl z-0"
+            ></div>
+            <img
+              src="https://picsum.photos/600/800?random=11"
+              alt="Suasana Pawon Mbok Kasti"
+              class="relative rounded-2xl shadow-xl w-full object-cover max-h-[550px] z-10 hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+
+          <!-- Right Text Layout -->
+          <div class="lg:col-span-7 flex flex-col gap-6 md:gap-8">
+            <div>
+              <span
+                class="font-serif italic text-gold text-lg md:text-xl font-semibold"
+                >Kehangatan Joglo Vintage</span
+              >
+              <h2
+                class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mt-1 mb-4"
+              >
+                Mengenal Pawon Mbok Kasti
+              </h2>
+              <div class="w-16 h-1 bg-gold rounded-full mb-2"></div>
+            </div>
+
+            <div
+              class="text-text-light text-sm md:text-base leading-relaxed flex flex-col gap-4"
+            >
+              <p>
+                Lahir dari impian melestarikan cita rasa masakan ibu serta
+                kehangatan rumah keluarga di pedesaan,
+                <strong>Pawon Mbok Kasti</strong> berdiri kokoh di kawasan
+                Pandaan, Pasuruan dengan menyajikan perpaduan unik antara
+                <strong>Joglo Jawa Klasik</strong> dan kenikmatan
+                <strong>Coffee Shop modern</strong>.
+              </p>
+              <p>
+                Kata <em>&ldquo;Pawon&rdquo;</em> berasal dari bahasa Jawa yang
+                berarti dapur—tempat di mana api kehangatan dinyalakan,
+                bumbu-bumbu diramu penuh cinta, dan tawa keluarga disatukan.
+                Kami berkomitmen untuk terus menyajikan masakan tradisional yang
+                lezat serta menyediakan tempat melepas penat terbaik bersama
+                kerabat terdekat Anda.
+              </p>
+            </div>
+
+            <!-- Tabs Visi Misi & Filosofi -->
+            <div
+              class="bg-white p-6 rounded-2xl border border-primary/5 shadow-sm"
+            >
+              <div
+                class="flex gap-4 border-b border-primary/10 pb-3 mb-4 text-sm font-semibold"
+              >
+                <button
+                  class="about-tab active text-primary border-b-2 border-gold pb-1 transition-all"
+                  data-tab="visi"
+                >
+                  Visi & Misi
+                </button>
+                <button
+                  class="about-tab text-text-light pb-1 hover:text-primary transition-all"
+                  data-tab="filosofi"
+                >
+                  Filosofi Kami
+                </button>
+              </div>
+
+              <!-- Visi Tab Content -->
+              <div
+                id="tab-visi"
+                class="about-tab-content text-sm text-text-light leading-relaxed flex flex-col gap-3"
+              >
+                <p>
+                  <strong>Visi:</strong> Menjadi ikon kuliner keluarga Jawa
+                  terbaik di Pandaan yang mampu memadukan kearifan lokal budaya
+                  tradisional dan kenyamanan modern.
+                </p>
+                <p>
+                  <strong>Misi:</strong> Menyajikan aneka masakan rumahan
+                  autentik bermutu tinggi, menghadirkan pelayanan ramah yang
+                  tulus, serta menjaga atmosfer lingkungan kumpul yang nyaman.
+                </p>
+              </div>
+
+              <!-- Filosofi Tab Content -->
+              <div
+                id="tab-filosofi"
+                class="about-tab-content hidden text-sm text-text-light leading-relaxed flex flex-col gap-2"
+              >
+                <p
+                  class="font-serif italic text-primary font-medium text-base mb-1"
+                >
+                  &ldquo;Karena tempat nyaman paling enak dinikmati
+                  rame-rame.&rdquo;
+                </p>
+                <p>
+                  Bagi kami, setiap pengunjung adalah bagian dari keluarga besar
+                  Pawon Mbok Kasti. Kami percaya bahwa kebahagiaan sejati
+                  berawal dari piring yang penuh dengan kehangatan masakan, dan
+                  meja yang penuh dengan obrolan akrab orang tercinta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section id="galeri" class="py-16 md:py-24 bg-cream-dark/30 relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Section Intro -->
+        <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
+          <h2
+            class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mb-4"
+          >
+            Galeri Estetik Kami
+          </h2>
+          <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-4"></div>
+          <p class="text-text-light font-medium">
+            Spill keindahan sudut vintage, sajian istimewa, dan kemeriahan
+            aktivitas di Pawon Mbok Kasti.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div
+          class="flex flex-wrap items-center justify-center gap-2 mb-8 md:mb-10"
+        >
+          <button
+            class="gallery-filter-btn active px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-primary text-white hover:bg-primary-light transition-all"
+            data-category="Semua"
+          >
+            Semua
+          </button>
+          <button
+            class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+            data-category="Interior"
+          >
+            Interior
+          </button>
+          <button
+            class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+            data-category="Makanan"
+          >
+            Makanan
+          </button>
+          <button
+            class="gallery-filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-primary/10 bg-white text-primary hover:bg-cream-dark transition-all"
+            data-category="Suasana"
+          >
+            Suasana
+          </button>
+        </div>
+
+        <!-- Gallery Grid (Masonry Effect via Tailwind Columns) -->
+        <div
+          id="gallery-grid"
+          class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 min-h-[400px]"
+        >
+          <!-- Dynamically rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REKRUTMEN / KARIR SECTION ==================== -->
+    <section id="karir" class="py-16 md:py-24 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Section Intro -->
+        <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          <h2
+            class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mb-4"
+          >
+            Bergabung Bersama Kami
+          </h2>
+          <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-4"></div>
+          <p class="text-text-light font-medium">
+            Miliki passion di industri F&B dan ingin berkembang? Temukan
+            lowongan impian Anda di Pawon Mbok Kasti!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Left Vacancies List -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <h3
+              class="font-serif text-2xl font-bold text-primary border-b border-primary/10 pb-3 mb-2"
+            >
+              <i class="fa-solid fa-briefcase mr-2 text-gold"></i> Lowongan
+              Pekerjaan
+            </h3>
+            <div id="jobs-list" class="flex flex-col gap-4">
+              <!-- Dynamically Rendered Jobs Cards -->
+            </div>
+          </div>
+
+          <!-- Right Application Form Card -->
+          <div
+            class="lg:col-span-7 bg-white p-6 md:p-8 rounded-2xl border border-primary/5 shadow-md"
+          >
+            <h3 class="font-serif text-2xl font-bold text-primary mb-2">
+              <i class="fa-solid fa-file-signature mr-2 text-gold"></i> Formulir
+              Lamaran Kerja
+            </h3>
+            <p class="text-text-light text-xs md:text-sm mb-6">
+              Isi formulir dengan lengkap dan lampirkan tautan CV digital Anda
+              yang dapat diakses (Google Drive, LinkedIn, Dropbox, dll.).
+            </p>
+
+            <form id="career-form" class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="career-name"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Nama Lengkap *</label
+                  >
+                  <input
+                    type="text"
+                    id="career-name"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                    placeholder="Nama lengkap Anda..."
+                  />
+                </div>
+                <div>
+                  <label
+                    for="career-email"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Alamat Email *</label
+                  >
+                  <input
+                    type="email"
+                    id="career-email"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                    placeholder="Contoh: andi@gmail.com"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="career-phone"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >No. Telepon/WhatsApp *</label
+                  >
+                  <input
+                    type="tel"
+                    id="career-phone"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                    placeholder="Format: 081234567xxx"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="career-position"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Posisi Pekerjaan *</label
+                  >
+                  <select
+                    id="career-position"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                  >
+                    <option value="" disabled selected>Pilih posisi...</option>
+                    <!-- Dynamically populated positions -->
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="career-cv"
+                  class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                  >Link CV / Portofolio (opsional)</label
+                >
+                <input
+                  type="url"
+                  id="career-cv"
+                  class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                  placeholder="Tautan Google Drive, LinkedIn, dll. (Pastikan akses publik dibuka)"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="career-message"
+                  class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                  >Ceritakan Tentang Diri Anda (opsional)</label
+                >
+                <textarea
+                  id="career-message"
+                  rows="4"
+                  class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm resize-none"
+                  placeholder="Ceritakan singkat motivasi dan keahlian utama Anda..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-gold hover:text-primary text-gold-light font-bold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm mt-2"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Kirim Berkas Lamaran
+              </button>
+
+              <!-- Success / Error Box Messages -->
+              <div
+                id="career-success"
+                class="hidden p-4 rounded-xl bg-green/10 border border-green/20 text-green text-sm font-semibold flex items-center gap-2"
+              >
+                <i class="fa-solid fa-circle-check text-base"></i> Lamaran
+                berhasil dikirim! Kami akan menghubungi Anda melalui email atau
+                WhatsApp. Terima kasih!
+              </div>
+              <div
+                id="career-error"
+                class="hidden p-4 rounded-xl bg-red-100 border border-red-200 text-red-600 text-sm font-semibold flex items-center gap-2"
+              >
+                <i class="fa-solid fa-circle-xmark text-base"></i> Maaf, terjadi
+                gangguan sistem. Silakan coba lagi atau kirim CV manual ke
+                pawonmbokkasti@gmail.com.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RESERVASI MEJA SECTION ==================== -->
+    <section
+      id="reservasi"
+      class="py-16 md:py-24 bg-cream-dark/35 relative border-y border-primary/5"
+    >
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Side Context Card -->
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            <div>
+              <span
+                class="font-serif italic text-gold text-lg md:text-xl font-semibold"
+                >Cepat & Tanpa Antre</span
+              >
+              <h2
+                class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mt-1 mb-4"
+              >
+                Sistem Reservasi Meja
+              </h2>
+              <div class="w-16 h-1 bg-gold rounded-full mb-2"></div>
+            </div>
+
+            <p class="text-text-light text-sm md:text-base leading-relaxed">
+              Ingin memesan meja bersama keluarga besar atau mengamankan kursi
+              di acara <strong>The Classic Vibes</strong>? Isi data reservasi
+              Anda di samping. Sistem kami akan menyusun pesan reservasi
+              otomatis ke admin WhatsApp kami.
+            </p>
+
+            <!-- WA Direct Copy Fallback Section -->
+            <div
+              class="bg-white p-6 rounded-2xl border border-primary/5 shadow-sm flex flex-col gap-3"
+            >
+              <span
+                class="text-xs font-bold text-primary uppercase tracking-wider"
+                >Layanan Hubungi Manual</span
+              >
+              <p class="text-xs text-text-light leading-relaxed">
+                Jika ada kendala format pesan, silakan simpan dan kirim pesan
+                manual ke nomor WhatsApp resmi kami:
+              </p>
+              <div
+                class="flex items-center justify-between bg-cream p-3 rounded-xl border border-primary/10"
+              >
+                <span
+                  class="font-mono font-bold text-primary text-base md:text-lg"
+                  ><i
+                    class="fa-brands fa-whatsapp text-green mr-1.5 text-lg"
+                  ></i>
+                  +62 823-4270-7766</span
+                >
+                <button
+                  onclick="copyToClipboard('6282342707766')"
+                  class="bg-primary hover:bg-gold text-gold-light hover:text-primary px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-copy"></i> Salin
+                </button>
+              </div>
+              <!-- Alert copy confirmation toast -->
+              <div
+                id="copy-alert"
+                class="hidden text-xs text-green font-semibold flex items-center gap-1.5"
+              >
+                <i class="fa-solid fa-circle-check"></i> Nomor berhasil disalin
+                ke papan klip!
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Reservation Form Card -->
+          <div
+            class="lg:col-span-7 bg-white p-6 md:p-8 rounded-2xl border border-primary/5 shadow-xl"
+          >
+            <form id="reservation-form" class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="reservation-name"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Nama Lengkap *</label
+                  >
+                  <input
+                    type="text"
+                    id="reservation-name"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                    placeholder="Atas nama siapa..."
+                  />
+                </div>
+                <div>
+                  <label
+                    for="reservation-phone"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >No. Telepon / WhatsApp *</label
+                  >
+                  <input
+                    type="tel"
+                    id="reservation-phone"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                    placeholder="Contoh: 081234567xxx"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label
+                    for="reservation-date"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Tanggal Kedatangan *</label
+                  >
+                  <input
+                    type="date"
+                    id="reservation-date"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="reservation-time"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Waktu / Jam *</label
+                  >
+                  <input
+                    type="time"
+                    id="reservation-time"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="reservation-guests"
+                    class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                    >Jumlah Orang *</label
+                  >
+                  <input
+                    type="number"
+                    id="reservation-guests"
+                    min="1"
+                    max="20"
+                    required
+                    class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+                    placeholder="1 s/d 20..."
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="reservation-notes"
+                  class="block text-xs font-bold text-primary tracking-wide uppercase mb-1.5"
+                  >Catatan Khusus / Permintaan Meja (opsional)</label
+                >
+                <textarea
+                  id="reservation-notes"
+                  rows="4"
+                  class="w-full px-4 py-2.5 rounded-lg border border-primary/15 bg-cream/30 focus:outline-none focus:ring-2 focus:ring-gold text-sm resize-none"
+                  placeholder="Contoh: Kursi bayi, dekat panggung live music, vegetarian, dsb."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-green hover:bg-primary hover:text-gold text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-sm mt-2"
+              >
+                <i class="fa-brands fa-whatsapp text-lg"></i> Kirim Form
+                Reservasi via WhatsApp
+              </button>
+              <p class="text-center text-[11px] text-text-light font-medium">
+                Klik tombol akan mengarahkan Anda langsung membuka WhatsApp
+                dengan format pesan siap kirim.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== KONTAK & LOKASI SECTION ==================== -->
+    <section id="kontak" class="py-16 md:py-24 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+          <!-- Left Side Contact Info -->
+          <div class="lg:col-span-5 flex flex-col justify-between gap-8">
+            <div>
+              <span
+                class="font-serif italic text-gold text-lg md:text-xl font-semibold"
+                >Mari Berkunjung</span
+              >
+              <h2
+                class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight mt-1 mb-4"
+              >
+                Informasi Kontak & Lokasi
+              </h2>
+              <div class="w-16 h-1 bg-gold rounded-full mb-6"></div>
+
+              <div class="space-y-5 text-sm md:text-base">
+                <!-- Alamat -->
+                <div class="flex gap-4">
+                  <span class="text-gold text-lg mt-0.5"
+                    ><i class="fa-solid fa-location-dot"></i
+                  ></span>
+                  <div>
+                    <h4 class="font-bold text-primary mb-1">Alamat Lengkap</h4>
+                    <p class="text-text-light text-sm leading-relaxed">
+                      Jl. Mangga 1, Klangkung, Nogosari, Kec. Pandaan, Pasuruan,
+                      Jawa Timur 67156
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Jam Operasional -->
+                <div class="flex gap-4">
+                  <span class="text-gold text-lg mt-0.5"
+                    ><i class="fa-solid fa-clock"></i
+                  ></span>
+                  <div>
+                    <h4 class="font-bold text-primary mb-1">Jam Operasional</h4>
+                    <p class="text-text-light text-sm leading-relaxed">
+                      Selasa &ndash; Minggu: 08.00 &ndash; 23.00 WIB
+                    </p>
+                    <p class="text-red-600 font-semibold text-xs mt-0.5">
+                      <i class="fa-solid fa-calendar-minus mr-1"></i> Hari
+                      Senin: TUTUP
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Kontak -->
+                <div class="flex gap-4">
+                  <span class="text-gold text-lg mt-0.5"
+                    ><i class="fa-solid fa-phone"></i
+                  ></span>
+                  <div>
+                    <h4 class="font-bold text-primary mb-1">Hubungi Kami</h4>
+                    <p class="text-text-light text-sm leading-relaxed">
+                      WhatsApp: +62 823-4270-7766
+                    </p>
+                    <p class="text-text-light text-sm leading-relaxed">
+                      Email: pawonmbokkasti@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Icons Row -->
+            <div class="pt-6 border-t border-primary/10">
+              <h4
+                class="font-bold text-primary text-xs uppercase tracking-wider mb-4"
+              >
+                Ikuti Kami Di Media Sosial
+              </h4>
+              <div class="flex gap-3">
+                <a
+                  href="https://instagram.com/pawonmbokkasti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-11 h-11 bg-white hover:bg-primary text-primary hover:text-gold rounded-full border border-primary/10 flex items-center justify-center text-lg shadow-sm transition hover:scale-105"
+                  aria-label="Instagram Resmi Pawon Mbok Kasti"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@pawonmbokkasti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-11 h-11 bg-white hover:bg-primary text-primary hover:text-gold rounded-full border border-primary/10 flex items-center justify-center text-lg shadow-sm transition hover:scale-105"
+                  aria-label="TikTok Resmi Pawon Mbok Kasti"
+                >
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a
+                  href="https://wa.me/6282342707766"
+                  class="w-11 h-11 bg-white hover:bg-primary text-primary hover:text-gold rounded-full border border-primary/10 flex items-center justify-center text-lg shadow-sm transition hover:scale-105"
+                  aria-label="WhatsApp Resmi Pawon Mbok Kasti"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a
+                  href="mailto:pawonmbokkasti@gmail.com"
+                  class="w-11 h-11 bg-white hover:bg-primary text-primary hover:text-gold rounded-full border border-primary/10 flex items-center justify-center text-lg shadow-sm transition hover:scale-105"
+                  aria-label="Email Pawon Mbok Kasti"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Google Maps iframe -->
+          <div
+            class="lg:col-span-7 rounded-2xl overflow-hidden border border-primary/10 shadow-lg min-h-[350px] relative"
+          >
+            <!-- Live iframe Google Maps Embed -->
+            <iframe
+              src="https://maps.google.com/maps?q=Pawon+Mbok+Kasti+Pandaan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              class="absolute inset-0 w-full h-full border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Lokasi Pawon Mbok Kasti Pandaan"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer class="bg-primary text-white py-12 md:py-16 relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 pb-12 border-b border-white/10"
+        >
+          <!-- Grid 1: Logo & Desc -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <a href="#beranda" class="flex flex-col select-none max-w-max">
+              <span
+                class="font-serif text-3xl font-bold text-gold tracking-tight leading-none"
+                >Pawon</span
+              >
+              <span
+                class="font-serif text-base italic font-semibold text-gold-light tracking-wider leading-none self-end"
+                >Mbok Kasti</span
+              >
+            </a>
+            <p class="text-cream-dark/80 text-sm leading-relaxed max-w-sm mt-2">
+              Restoran dan cafe di Pandaan yang menghadirkan kehangatan cita
+              rasa prasmanan khas Jawa tradisional dalam nuansa arsitektur Joglo
+              kuno yang menawan dan asri.
+            </p>
+          </div>
+
+          <!-- Grid 2: Quick Links -->
+          <div class="lg:col-span-4 flex flex-col gap-4">
+            <h4 class="font-serif text-lg font-bold text-gold">
+              Tautan Langsung
+            </h4>
+            <div
+              class="grid grid-cols-2 gap-2 text-sm text-cream-dark/90 font-medium"
+            >
+              <a href="#menu" class="hover:text-gold transition-colors py-1"
+                ><i
+                  class="fa-solid fa-chevron-right text-xs mr-1 text-gold/60"
+                ></i>
+                Menu</a
+              >
+              <a href="#event" class="hover:text-gold transition-colors py-1"
+                ><i
+                  class="fa-solid fa-chevron-right text-xs mr-1 text-gold/60"
+                ></i>
+                Event</a
+              >
+              <a href="#tentang" class="hover:text-gold transition-colors py-1"
+                ><i
+                  class="fa-solid fa-chevron-right text-xs mr-1 text-gold/60"
+                ></i>
+                Tentang</a
+              >
+              <a href="#galeri" class="hover:text-gold transition-colors py-1"
+                ><i
+                  class="fa-solid fa-chevron-right text-xs mr-1 text-gold/60"
+                ></i>
+                Galeri</a
+              >
+              <a href="#karir" class="hover:text-gold transition-colors py-1"
+                ><i
+                  class="fa-solid fa-chevron-right text-xs mr-1 text-gold/60"
+                ></i>
+                Karir</a
+              >
+              <a href="#kontak" class="hover:text-gold transition-colors py-1"
+                ><i
+                  class="fa-solid fa-chevron-right text-xs mr-1 text-gold/60"
+                ></i>
+                Kontak</a
+              >
+            </div>
+          </div>
+
+          <!-- Grid 3: Legal & Corporate Links -->
+          <div class="lg:col-span-3 flex flex-col gap-4">
+            <h4 class="font-serif text-lg font-bold text-gold">Legalitas</h4>
+            <div
+              class="flex flex-col gap-2.5 text-sm text-cream-dark/90 font-medium"
+            >
+              <button
+                onclick="openModal('privacy')"
+                class="text-left hover:text-gold transition-all py-1"
+              >
+                <i
+                  class="fa-solid fa-shield-halved text-xs mr-1.5 text-gold/60"
+                ></i>
+                Kebijakan Privasi
+              </button>
+              <button
+                onclick="openModal('terms')"
+                class="text-left hover:text-gold transition-all py-1"
+              >
+                <i
+                  class="fa-solid fa-scale-balanced text-xs mr-1.5 text-gold/60"
+                ></i>
+                Syarat & Ketentuan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div
+          class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-dark/70 font-medium"
+        >
+          <p>
+            &copy; 2026 Pawon Mbok Kasti. Hak Cipta Dilindungi Undang-Undang.
+          </p>
+          <p class="flex items-center gap-1">
+            Dibuat dengan
+            <i class="fa-solid fa-heart text-red-500 animate-pulse"></i> untuk
+            kuliner Nusantara.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== GALLERY LIGHTBOX MODAL ==================== -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black/95 z-[1000] hidden items-center justify-center p-4"
+    >
+      <!-- Close Lightbox Button -->
+      <button
+        id="lightbox-close"
+        onclick="closeLightbox()"
+        aria-label="Close Lightbox"
+        class="absolute top-6 right-6 text-white hover:text-gold text-3xl transition duration-200 z-[1010]"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Navigation Buttons -->
+      <button
+        onclick="prevLightbox()"
+        aria-label="Previous Image"
+        class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gold text-4xl transition duration-200 z-[1010] p-2 bg-black/30 hover:bg-black/50 rounded-full"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button
+        onclick="nextLightbox()"
+        aria-label="Next Image"
+        class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gold text-4xl transition duration-200 z-[1010] p-2 bg-black/30 hover:bg-black/50 rounded-full"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Lightbox Container content -->
+      <div
+        class="lightbox-content max-w-4xl max-h-[85vh] flex flex-col items-center justify-center gap-4 relative z-0"
+      >
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Detail Gallery"
+          class="max-w-full max-h-[75vh] object-contain rounded-lg border-2 border-primary/25 shadow-2xl"
+        />
+        <p
+          id="lightbox-caption"
+          class="text-cream font-serif italic text-base md:text-lg tracking-wide drop-shadow text-center font-semibold"
+        ></p>
+      </div>
+    </div>
+
+    <!-- ==================== LEGAL / COMPLIANCE MODAL OVERLAYS ==================== -->
+    <div
+      id="legal-modal"
+      class="fixed inset-0 bg-black/75 z-[1000] hidden items-center justify-center p-4 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-2xl w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl border border-primary/10 overflow-hidden"
+      >
+        <!-- Modal Header -->
+        <div
+          class="px-6 py-4 bg-primary text-white flex items-center justify-between"
+        >
+          <h3
+            id="legal-modal-title"
+            class="font-serif text-xl font-bold text-gold"
+          >
+            Judul Legalitas
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="text-white hover:text-gold text-2xl transition"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <!-- Modal Body (Scrollable) -->
+        <div
+          id="legal-modal-body"
+          class="p-6 overflow-y-auto text-sm text-text-light leading-relaxed space-y-4"
+        >
+          <!-- Content gets injected dynamically -->
+        </div>
+        <!-- Modal Footer -->
+        <div
+          class="px-6 py-3 bg-cream border-t border-primary/5 flex justify-end"
+        >
+          <button
+            onclick="closeModal()"
+            class="bg-primary hover:bg-gold text-gold-light hover:text-primary font-semibold px-5 py-2 rounded-lg text-sm transition"
+          >
+            Tutup Dokumen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+      // ==================== DATA DECLARATIONS ====================
+      const menuItems = [
+        {
+          name: "Mix Platter",
+          category: "Camilan",
+          price: "Rp 45.000",
+          desc: "Camilan gurih renyah kekinian, teman seru nongkrong.",
+          badge: "Rekomendasi",
+          image: "https://picsum.photos/400/300?random=1",
+        },
+        {
+          name: "Kiwi Yakult",
+          category: "Minuman",
+          price: "Rp 18.000",
+          desc: "Kombinasi asam manis yakult asli dan kesegaran sirup kiwi.",
+          badge: null,
+          image: "https://picsum.photos/400/300?random=2",
+        },
+        {
+          name: "Bubur Madura",
+          category: "Prasmanan",
+          price: "Rp 25.000",
+          desc: "Bubur legit hangat manis disajikan dengan aneka topping khas Madura.",
+          badge: "Favorit",
+          image: "https://picsum.photos/400/300?random=3",
+        },
+        {
+          name: "Ayam Bakar",
+          category: "Makanan",
+          price: "Rp 35.000",
+          desc: "Ayam panggang bumbu karamel kecap rempah pilihan khas Jawa Timur.",
+          badge: "Rekomendasi",
+          image: "https://picsum.photos/400/300?random=4",
+        },
+        {
+          name: "Rawon",
+          category: "Prasmanan",
+          price: "Rp 30.000",
+          desc: "Sup kuah hitam pekat kluwek dengan daging sapi empuk melimpah.",
+          badge: null,
+          image: "https://picsum.photos/400/300?random=5",
+        },
+        {
+          name: "Es Wedang",
+          category: "Minuman",
+          price: "Rp 15.000",
+          desc: "Minuman tradisional segar penambah stamina kaya rempah murni.",
+          badge: null,
+          image: "https://picsum.photos/400/300?random=6",
+        },
+        {
+          name: "Nasi Pecel",
+          category: "Prasmanan",
+          price: "Rp 22.000",
+          desc: "Nasi hangat disiram aneka sayur segar dan saus kacang gurih legit.",
+          badge: null,
+          image: "https://picsum.photos/400/300?random=7",
+        },
+        {
+          name: "Kopi Susu",
+          category: "Minuman",
+          price: "Rp 20.000",
+          desc: "Kopi espreso robusta lokal dipadu susu kental manis kekinian.",
+          badge: "Rekomendasi",
+          image: "https://picsum.photos/400/300?random=8",
+        },
+      ];
+
+      const jobs = [
+        {
+          title: "Barista",
+          qualification:
+            "Berpengalaman min. 1 tahun, memiliki passion kopi & kemandirian kerja.",
+          status: "Dibuka",
+        },
+        {
+          title: "Supervisor",
+          qualification:
+            "Min. 2 tahun pengalaman leadership di bidang F&B (kafe / resto).",
+          status: "Dibuka",
+        },
+        {
+          title: "Admin",
+          qualification:
+            "Menguasai MS Office / Google Workspace, teliti, sigap komunikasi digital.",
+          status: "Dibuka",
+        },
+        {
+          title: "Waiter/Waitress",
+          qualification:
+            "Ramah, komunikatif, fresh graduate dipersilakan melamar.",
+          status: "Dibuka",
+        },
+        {
+          title: "Dishwasher",
+          qualification:
+            "Fisik prima, cekatan, menjaga standar kebersihan ketat dapur.",
+          status: "Dibuka",
+        },
+      ];
+
+      const galleryItems = [
+        {
+          id: 1,
+          category: "Interior",
+          title: "Joglo Klasik Utama",
+          image: "https://picsum.photos/800/600?random=11",
+        },
+        {
+          id: 2,
+          category: "Interior",
+          title: "Ruang VIP AC Bebas Asap",
+          image: "https://picsum.photos/800/600?random=12",
+        },
+        {
+          id: 3,
+          category: "Interior",
+          title: "Area Outdoor Teduh",
+          image: "https://picsum.photos/800/600?random=13",
+        },
+        {
+          id: 4,
+          category: "Interior",
+          title: "Sudut Gebyok Ukir Jepara",
+          image: "https://picsum.photos/800/600?random=14",
+        },
+        {
+          id: 5,
+          category: "Makanan",
+          title: "Prasmanan Jawa Rumahan",
+          image: "https://picsum.photos/800/600?random=15",
+        },
+        {
+          id: 6,
+          category: "Makanan",
+          title: "Ayam Bakar Rempah Wangi",
+          image: "https://picsum.photos/800/600?random=16",
+        },
+        {
+          id: 7,
+          category: "Makanan",
+          title: "Bubur Madura Manis Legit",
+          image: "https://picsum.photos/800/600?random=17",
+        },
+        {
+          id: 8,
+          category: "Makanan",
+          title: "Rawon Kuah Hitam Pekat",
+          image: "https://picsum.photos/800/600?random=18",
+        },
+        {
+          id: 9,
+          category: "Suasana",
+          title: "Panggung Hiburan Live Music",
+          image: "https://picsum.photos/800/600?random=19",
+        },
+        {
+          id: 10,
+          category: "Suasana",
+          title: "Momen Makan Bersama Keluarga",
+          image: "https://picsum.photos/800/600?random=20",
+        },
+        {
+          id: 11,
+          category: "Suasana",
+          title: "Suasana Senja Pawon",
+          image: "https://picsum.photos/800/600?random=21",
+        },
+        {
+          id: 12,
+          category: "Suasana",
+          title: "Keindahan Malam Gebyok",
+          image: "https://picsum.photos/800/600?random=22",
+        },
+      ];
+
+      // ==================== APP INITIALIZATION ====================
+      document.addEventListener("DOMContentLoaded", () => {
+        // Set default minimum date to today
+        const today = new Date().toISOString().split("T")[0];
+        const dateInput = document.getElementById("reservation-date");
+        if (dateInput) dateInput.setAttribute("min", today);
+
+        // Render Dynamic Content Components
+        renderMenu();
+        renderJobs();
+        populateCareerDropdown();
+        renderGallery();
+        updateOperationalStatus();
+
+        // Set Intervallic Status Polling (Every minute)
+        setInterval(updateOperationalStatus, 60000);
+      });
+
+      // ==================== REALTIME OPERATIONAL BADGE ====================
+      function updateOperationalStatus() {
+        // Simulates GMT+7 (WIB) time irrespective of user device locale if desired, but as requested: "gunakan waktu lokal perangkat, tapi anggap WIB"
+        const now = new Date();
+        const day = now.getDay(); // 0: Minggu, 1: Senin, 2: Selasa, ... 6: Sabtu
+        const hour = now.getHours();
+        const minutes = now.getMinutes();
+        const decimalTime = hour + minutes / 60;
+
+        let isOpen = false;
+        // Operational Rules: Selasa - Minggu (08:00 - 23:00 WIB), Senin tutup.
+        if (day !== 1) {
+          // 1 is Monday
+          if (decimalTime >= 8 && decimalTime < 23) {
+            isOpen = true;
+          }
+        }
+
+        const text = isOpen ? "BUKA" : "TUTUP";
+        const indicatorClass = isOpen
+          ? "bg-green/15 text-green border border-green/30"
+          : "bg-red-100 text-red-600 border border-red-200";
+        const iconHTML = isOpen
+          ? '<span class="pulse-dot"></span>'
+          : '<i class="fa-solid fa-circle-minus mr-1.5 text-xs"></i>';
+
+        const statusBadge = document.getElementById("status-badge");
+        const statusBadgeMobile = document.getElementById(
+          "status-badge-mobile"
+        );
+
+        if (statusBadge) {
+          statusBadge.innerHTML = `${iconHTML} ${text}`;
+          statusBadge.className = `px-3 py-1.5 rounded-full text-xs font-bold flex items-center shadow-sm ${indicatorClass}`;
+        }
+        if (statusBadgeMobile) {
+          statusBadgeMobile.innerHTML = `${iconHTML} ${text}`;
+          statusBadgeMobile.className = `px-4 py-1.5 rounded-full text-sm font-bold flex items-center shadow-sm ${indicatorClass}`;
+        }
+      }
+
+      // ==================== MOBILE MENU NAV DRAWER ====================
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const bars = document.querySelectorAll(".bar");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.contains("left-0");
+        if (isOpen) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      });
+
+      function openDrawer() {
+        mobileMenu.classList.remove("left-full");
+        mobileMenu.classList.add("left-0");
+        bars[0].classList.add("rotate-45", "translate-y-2");
+        bars[1].classList.add("opacity-0");
+        bars[2].classList.add("-rotate-45", "-translate-y-2");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeDrawer() {
+        mobileMenu.classList.add("left-full");
+        mobileMenu.classList.remove("left-0");
+        bars[0].classList.remove("rotate-45", "translate-y-2");
+        bars[1].classList.remove("opacity-0");
+        bars[2].classList.remove("-rotate-45", "-translate-y-2");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      // Smooth Scrolling & Drawer Close for Mobile Links
+      const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          closeDrawer();
+        });
+      });
+
+      // ==================== ACTIVE NAV STATE ON SCROLL ====================
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop - 120) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // ==================== HERO SLIDESHOW AUTOPLAY ====================
+      let currentHeroIndex = 0;
+      const heroSlides = document.querySelectorAll(".hero-slide");
+      const heroDots = document.querySelectorAll(".hero-dot");
+      let heroInterval = setInterval(nextHeroSlide, 5000);
+
+      function showHeroSlide(index) {
+        heroSlides.forEach((slide) => {
+          slide.classList.remove("opacity-100", "active");
+          slide.classList.add("opacity-0");
+        });
+        heroDots.forEach((dot) => {
+          dot.classList.remove("bg-white", "scale-110");
+          dot.classList.add("bg-white/40");
+        });
+
+        heroSlides[index].classList.remove("opacity-0");
+        heroSlides[index].classList.add("opacity-100", "active");
+        heroDots[index].classList.remove("bg-white/40");
+        heroDots[index].classList.add("bg-white", "scale-110");
+        currentHeroIndex = index;
+      }
+
+      function nextHeroSlide() {
+        const nextIndex = (currentHeroIndex + 1) % heroSlides.length;
+        showHeroSlide(nextIndex);
+      }
+
+      heroDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          clearInterval(heroInterval);
+          showHeroSlide(index);
+          heroInterval = setInterval(nextHeroSlide, 5000);
+        });
+      });
+
+      // ==================== DYNAMIC MENU FILTERING & SEARCH ====================
+      const menuGrid = document.getElementById("menu-grid");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const menuSearch = document.getElementById("menu-search");
+
+      let currentCategory = "Semua";
+
+      function renderMenu() {
+        menuGrid.innerHTML = "";
+        const searchQuery = menuSearch.value.toLowerCase().trim();
+
+        const filteredItems = menuItems.filter((item) => {
+          const matchesCategory =
+            currentCategory === "Semua" || item.category === currentCategory;
+          const matchesSearch =
+            item.name.toLowerCase().includes(searchQuery) ||
+            item.desc.toLowerCase().includes(searchQuery);
+          return matchesCategory && matchesSearch;
+        });
+
+        if (filteredItems.length === 0) {
+          menuGrid.innerHTML = `
+          <div class="col-span-full flex flex-col items-center justify-center p-12 text-center text-text-light">
+            <i class="fa-solid fa-cookie-bite text-5xl text-gold/40 mb-4"></i>
+            <h4 class="font-serif text-lg font-bold text-primary">Hidangan Tidak Ditemukan</h4>
+            <p class="text-xs mt-1">Coba gunakan kata kunci pencarian atau kategori filter lainnya.</p>
+          </div>
+        `;
+          return;
+        }
+
+        filteredItems.forEach((item) => {
+          const badgeHTML = item.badge
+            ? `<span class="absolute top-3 left-3 bg-gold text-primary font-serif italic text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">${item.badge}</span>`
+            : "";
+
+          const card = document.createElement("div");
+          card.className =
+            "bg-white rounded-2xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group";
+          card.innerHTML = `
+          <div class="relative overflow-hidden h-48 bg-cream-dark">
+            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" referrerPolicy="no-referrer">
+            ${badgeHTML}
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-primary text-[10px] font-bold px-2.5 py-1 rounded-full border border-primary/5">${item.category}</span>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+            <div class="flex flex-col gap-1.5">
+              <h3 class="font-serif text-lg font-bold text-primary">${item.name}</h3>
+              <p class="text-text-light text-xs leading-relaxed line-clamp-2">${item.desc}</p>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-primary/5 mt-auto">
+              <span class="font-bold text-primary text-base">${item.price}</span>
+              <button onclick="orderDirect('${item.name}')" class="bg-cream hover:bg-gold hover:text-primary text-primary font-bold px-4 py-2 rounded-full text-xs transition duration-200 flex items-center gap-1 shadow-sm">
+                Pesan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        `;
+          menuGrid.appendChild(card);
+        });
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => {
+            btn.classList.remove("bg-primary", "text-white");
+            btn.classList.add("bg-white", "text-primary");
+          });
+          button.classList.remove("bg-white", "text-primary");
+          button.classList.add("bg-primary", "text-white");
+
+          currentCategory = button.getAttribute("data-category");
+          renderMenu();
+        });
+      });
+
+      menuSearch.addEventListener("input", renderMenu);
+
+      // Dynamic redirection of specific menu click to Reservation Note
+      window.orderDirect = function (itemName) {
+        const notes = document.getElementById("reservation-notes");
+        if (notes) {
+          notes.value = `Saya tertarik memesan menu: "${itemName}". Mohon dipersiapkan saat kedatangan kami. Terima kasih!`;
+        }
+        const section = document.getElementById("reservasi");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // ==================== TENTANG KAMI TAB ENGINE ====================
+      const aboutTabs = document.querySelectorAll(".about-tab");
+      const visiContent = document.getElementById("tab-visi");
+      const filosofiContent = document.getElementById("tab-filosofi");
+
+      aboutTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          aboutTabs.forEach((t) => {
+            t.classList.remove("text-primary", "border-b-2", "border-gold");
+            t.classList.add("text-text-light");
+          });
+          tab.classList.remove("text-text-light");
+          tab.classList.add("text-primary", "border-b-2", "border-gold");
+
+          const activeTab = tab.getAttribute("data-tab");
+          if (activeTab === "visi") {
+            visiContent.classList.remove("hidden");
+            filosofiContent.classList.add("hidden");
+          } else {
+            visiContent.classList.add("hidden");
+            filosofiContent.classList.remove("hidden");
+          }
+        });
+      });
+
+      // ==================== GALLERY FILTER & LIGHTBOX ====================
+      const galleryGrid = document.getElementById("gallery-grid");
+      const galleryFilterBtns = document.querySelectorAll(
+        ".gallery-filter-btn"
+      );
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+
+      let currentGalleryCategory = "Semua";
+      let filteredGalleryItems = [...galleryItems];
+      let currentLightboxIndex = 0;
+
+      function renderGallery() {
+        galleryGrid.innerHTML = "";
+        filteredGalleryItems =
+          currentGalleryCategory === "Semua"
+            ? galleryItems
+            : galleryItems.filter(
+                (item) => item.category === currentGalleryCategory
+              );
+
+        filteredGalleryItems.forEach((item, index) => {
+          const itemEl = document.createElement("div");
+          itemEl.className =
+            "break-inside-avoid relative overflow-hidden rounded-2xl group cursor-pointer shadow-sm border border-primary/5 mb-4";
+          itemEl.innerHTML = `
+          <div onclick="openLightbox(${index})" class="relative overflow-hidden w-full h-auto">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 rounded-2xl" loading="lazy" referrerPolicy="no-referrer" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+              <span class="text-gold text-xs font-bold uppercase tracking-wider mb-1">${item.category}</span>
+              <h4 class="font-serif text-base font-bold text-cream">${item.title}</h4>
+              <span class="absolute top-4 right-4 bg-white/20 backdrop-blur rounded-full w-8 h-8 flex items-center justify-center text-sm border border-white/10"><i class="fa-solid fa-magnifying-glass-plus text-white"></i></span>
+            </div>
+          </div>
+        `;
+          galleryGrid.appendChild(itemEl);
+        });
+      }
+
+      galleryFilterBtns.forEach((button) => {
+        button.addEventListener("click", () => {
+          galleryFilterBtns.forEach((btn) => {
+            btn.classList.remove("bg-primary", "text-white");
+            btn.classList.add("bg-white", "text-primary");
+          });
+          button.classList.remove("bg-white", "text-primary");
+          button.classList.add("bg-primary", "text-white");
+
+          currentGalleryCategory = button.getAttribute("data-category");
+          renderGallery();
+        });
+      });
+
+      window.openLightbox = function (index) {
+        currentLightboxIndex = index;
+        const item = filteredGalleryItems[index];
+        if (item) {
+          lightboxImg.src = item.image;
+          lightboxCaption.textContent = `${item.title} &mdash; ${item.category}`;
+          lightbox.classList.remove("hidden");
+          lightbox.classList.add("flex");
+          document.body.classList.add("overflow-hidden");
+        }
+      };
+
+      window.closeLightbox = function () {
+        lightbox.classList.remove("flex");
+        lightbox.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      };
+
+      window.prevLightbox = function () {
+        currentLightboxIndex =
+          (currentLightboxIndex - 1 + filteredGalleryItems.length) %
+          filteredGalleryItems.length;
+        openLightbox(currentLightboxIndex);
+      };
+
+      window.nextLightbox = function () {
+        currentLightboxIndex =
+          (currentLightboxIndex + 1) % filteredGalleryItems.length;
+        openLightbox(currentLightboxIndex);
+      };
+
+      // Close on click backdrop
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.id === "lightbox-close") {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard controls for Lightbox
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("hidden")) {
+          if (e.key === "Escape") closeLightbox();
+          if (e.key === "ArrowLeft") prevLightbox();
+          if (e.key === "ArrowRight") nextLightbox();
+        }
+      });
+
+      // ==================== CAREER SECTION DYNAMICS ====================
+      const jobsList = document.getElementById("jobs-list");
+      const careerPositionSelect = document.getElementById("career-position");
+
+      function renderJobs() {
+        jobsList.innerHTML = "";
+        jobs.forEach((job) => {
+          const card = document.createElement("div");
+          card.className =
+            "bg-white p-5 rounded-xl border border-primary/5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-gold/30 transition-all group";
+          card.innerHTML = `
+          <div class="flex flex-col gap-1.5">
+            <div class="flex items-center gap-3">
+              <h4 class="font-serif text-lg font-bold text-primary">${job.title}</h4>
+              <span class="bg-green/10 text-green font-bold text-[10px] px-2 py-0.5 rounded-full border border-green/20">${job.status}</span>
+            </div>
+            <p class="text-text-light text-xs leading-relaxed"><strong class="text-primary font-semibold">Kualifikasi:</strong> ${job.qualification}</p>
+          </div>
+          <button onclick="applyForJob('${job.title}')" class="bg-cream group-hover:bg-primary group-hover:text-gold-light text-primary px-4 py-2 rounded-lg text-xs font-bold transition duration-200 shrink-0 self-start md:self-center shadow-sm">
+            Lamar <i class="fa-solid fa-arrow-right-long ml-1"></i>
+          </button>
+        `;
+          jobsList.appendChild(card);
+        });
+      }
+
+      function populateCareerDropdown() {
+        jobs.forEach((job) => {
+          const option = document.createElement("option");
+          option.value = job.title;
+          option.textContent = job.title;
+          careerPositionSelect.appendChild(option);
+        });
+      }
+
+      window.applyForJob = function (jobTitle) {
+        if (careerPositionSelect) {
+          careerPositionSelect.value = jobTitle;
+        }
+        const section = document.getElementById("karir");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // ==================== REKRUTMEN FORM HANDLING ====================
+      const careerForm = document.getElementById("career-form");
+      const careerSuccess = document.getElementById("career-success");
+      const careerError = document.getElementById("career-error");
+
+      careerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        clearFormErrors("career-form");
+        careerSuccess.classList.add("hidden");
+        careerError.classList.add("hidden");
+
+        const name = document.getElementById("career-name").value.trim();
+        const email = document.getElementById("career-email").value.trim();
+        const phone = document.getElementById("career-phone").value.trim();
+        const position = careerPositionSelect.value;
+        const cvLink = document.getElementById("career-cv").value.trim();
+        const message = document.getElementById("career-message").value.trim();
+
+        let isValid = true;
+
+        if (name.length < 3) {
+          setFieldError("career-name", "Nama lengkap minimal 3 karakter.");
+          isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          setFieldError(
+            "career-email",
+            "Silakan masukkan format alamat email yang valid."
+          );
+          isValid = false;
+        }
+
+        const numRegex = /^[0-9]+$/;
+        if (phone.length < 10 || !numRegex.test(phone)) {
+          setFieldError(
+            "career-phone",
+            "No. telepon harus berupa angka murni minimal 10 digit."
+          );
+          isValid = false;
+        }
+
+        if (!position) {
+          setFieldError(
+            "career-position",
+            "Silakan pilih salah satu posisi pekerjaan."
+          );
+          isValid = false;
+        }
+
+        if (
+          cvLink &&
+          !cvLink.startsWith("http://") &&
+          !cvLink.startsWith("https://")
+        ) {
+          setFieldError(
+            "career-cv",
+            "Masukkan URL valid diawali dengan http:// atau https://"
+          );
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        const submitBtn = careerForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin mr-1.5"></i> Mengirimkan Berkas...';
+
+        try {
+          const response = await fetch(
+            "https://formspree.io/f/your-formspree-id",
+            {
+              method: "POST",
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                Nama: name,
+                Email: email,
+                Telepon: phone,
+                Posisi: position,
+                CV_Link: cvLink,
+                Pesan: message,
+              }),
+            }
+          );
+
+          if (response.ok) {
+            careerSuccess.classList.remove("hidden");
+            careerForm.reset();
+          } else {
+            throw new Error("Post error");
+          }
+        } catch (err) {
+          careerError.classList.remove("hidden");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+
+      // ==================== RESERVASI MEJA FORM VALIDATION & WA REDIRECT ====================
+      const reservationForm = document.getElementById("reservation-form");
+
+      reservationForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        clearFormErrors("reservation-form");
+
+        const name = document.getElementById("reservation-name").value.trim();
+        const phone = document.getElementById("reservation-phone").value.trim();
+        const dateVal = document.getElementById("reservation-date").value;
+        const timeVal = document.getElementById("reservation-time").value;
+        const guests = parseInt(
+          document.getElementById("reservation-guests").value
+        );
+        const notes = document.getElementById("reservation-notes").value.trim();
+
+        let isValid = true;
+
+        if (name.length < 3) {
+          setFieldError(
+            "reservation-name",
+            "Nama reservasi minimal 3 karakter."
+          );
+          isValid = false;
+        }
+
+        const numRegex = /^[0-9]+$/;
+        if (phone.length < 10 || !numRegex.test(phone)) {
+          setFieldError(
+            "reservation-phone",
+            "No. telepon harus berupa angka murni minimal 10 digit."
+          );
+          isValid = false;
+        }
+
+        if (!dateVal) {
+          setFieldError("reservation-date", "Tanggal kedatangan wajib diisi.");
+          isValid = false;
+        } else {
+          const selectedDate = new Date(dateVal);
+          const dayOfWeek = selectedDate.getDay(); // 1: Monday
+          if (dayOfWeek === 1) {
+            setFieldError(
+              "reservation-date",
+              "Maaf, Pawon Mbok Kasti tutup pada hari Senin. Pilih Selasa s/d Minggu."
+            );
+            isValid = false;
+          }
+        }
+
+        if (!timeVal) {
+          setFieldError("reservation-time", "Jam kedatangan wajib diisi.");
+          isValid = false;
+        } else {
+          const [hours, mins] = timeVal.split(":").map(Number);
+          const floatTime = hours + mins / 60;
+          if (floatTime < 8 || floatTime > 23) {
+            setFieldError(
+              "reservation-time",
+              "Reservasi hanya di antara jam operasional 08:00 s/d 23:00."
+            );
+            isValid = false;
+          }
+        }
+
+        if (isNaN(guests) || guests < 1 || guests > 20) {
+          setFieldError(
+            "reservation-guests",
+            "Isi jumlah tamu antara 1 s/d 20 orang."
+          );
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        // Construct formatted WA text message
+        const formattedDate = formatIndonesianDate(dateVal);
+        const messageText =
+          `Halo Pawon Mbok Kasti,\n\nSaya ingin memesan meja (reservasi):\n\n` +
+          `• *Nama:* ${name}\n` +
+          `• *No. Telepon:* ${phone}\n` +
+          `• *Hari & Tanggal:* ${formattedDate}\n` +
+          `• *Jam Kedatangan:* ${timeVal} WIB\n` +
+          `• *Jumlah Orang:* ${guests} orang\n` +
+          `• *Catatan:* ${notes ? notes : "-"}\n\n` +
+          `Mohon konfirmasi ketersediaan meja kami. Terima kasih!`;
+
+        const encodedMessage = encodeURIComponent(messageText);
+        const waUrl = `https://wa.me/6282342707766?text=${encodedMessage}`;
+
+        // Open universal WA link in a new browser tab
+        window.open(waUrl, "_blank");
+      });
+
+      // ==================== ERROR COMPONENT UI FORM HANDLERS ====================
+      function setFieldError(fieldId, errorMessage) {
+        const field = document.getElementById(fieldId);
+        if (field) {
+          field.classList.add("is-invalid");
+          const errSpan = document.createElement("span");
+          errSpan.className = "field-error-msg block";
+          errSpan.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> ${errorMessage}`;
+          field.parentNode.appendChild(errSpan);
+        }
+      }
+
+      function clearFormErrors(formId) {
+        const form = document.getElementById(formId);
+        if (form) {
+          const invalidFields = form.querySelectorAll(".is-invalid");
+          invalidFields.forEach((field) =>
+            field.classList.remove("is-invalid")
+          );
+          const errors = form.querySelectorAll(".field-error-msg");
+          errors.forEach((err) => err.remove());
+        }
+      }
+
+      // Copy Manual WA Fallback Helper
+      window.copyToClipboard = function (text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const toast = document.getElementById("copy-alert");
+          if (toast) {
+            toast.classList.remove("hidden");
+            setTimeout(() => {
+              toast.classList.add("hidden");
+            }, 3000);
+          }
+        });
+      };
+
+      function formatIndonesianDate(dateString) {
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+        const date = new Date(dateString);
+        return date.toLocaleDateString("id-ID", options);
+      }
+
+      // ==================== LEGAL & COMPLIANCE MODAL WINDOWS ====================
+      const legalModal = document.getElementById("legal-modal");
+      const legalTitle = document.getElementById("legal-modal-title");
+      const legalBody = document.getElementById("legal-modal-body");
+
+      const legalTexts = {
+        privacy: {
+          title: "Kebijakan Privasi - Pawon Mbok Kasti",
+          body: `
+          <p class="font-bold text-primary mb-2">1. Pengumpulan Data Pribadi</p>
+          <p class="mb-4">Kami menghormati privasi Anda. Data pribadi yang Anda masukkan melalui formulir Reservasi (Nama, No. Telepon, Tanggal, Jam, Catatan) dan formulir Karir (Nama, Email, Telepon, Posisi, Link CV, Pesan) digunakan murni untuk keperluan konfirmasi kedatangan dan pemrosesan seleksi lamaran kerja.</p>
+          
+          <p class="font-bold text-primary mb-2">2. Penyimpanan dan Perlindungan Data</p>
+          <p class="mb-4">Seluruh data reservasi tidak disimpan pada basis data server kami secara internal melainkan dikirimkan secara langsung ke aplikasi perpesanan WhatsApp resmi milik Pawon Mbok Kasti. Data Karir diteruskan ke alamat email internal resmi kami via gateway penyedia Formspree secara aman dengan enkripsi HTTPS.</p>
+          
+          <p class="font-bold text-primary mb-2">3. Google Analytics dan Cookie</p>
+          <p class="mb-4">Website ini mengimplementasikan Google Analytics 4 (GA4) secara terbatas untuk keperluan analisis statistik traffic demi menyempurnakan performa dan penelusuran kegunaan situs. Cookie dapat dinonaktifkan dengan mudah oleh pengguna melalui setelan pengaturan masing-masing browser.</p>
+          
+          <p class="font-bold text-primary mb-2">4. Persetujuan</p>
+          <p>Dengan menggunakan situs web Pawon Mbok Kasti dan mengirimkan formulir di dalamnya, Anda menyetujui poin-poin yang tercantum dalam Kebijakan Privasi ini.</p>
+        `,
+        },
+        terms: {
+          title: "Syarat & Ketentuan Penggunaan - Pawon Mbok Kasti",
+          body: `
+          <p class="font-bold text-primary mb-2">1. Ketentuan Reservasi Meja</p>
+          <p class="mb-4">Setiap reservasi yang diajukan oleh pelanggan melalui website ini bersifat permohonan penjadwalan. Keabsahan pemesanan meja dan jaminan ketersediaan tempat baru dinyatakan valid dan mengikat setelah admin resmi Pawon Mbok Kasti memberikan konfirmasi jawaban resmi melalui chat balasan WhatsApp.</p>
+          
+          <p class="font-bold text-primary mb-2">2. Pembatalan Kedatangan</p>
+          <p class="mb-4">Guna efektivitas operasional, pelanggan dimohon mengonfirmasikan perubahan jam kedatangan atau pembatalan sekurang-kurangnya 2 (dua) jam sebelum jam pemesanan yang disepakati.</p>
+          
+          <p class="font-bold text-primary mb-2">3. Hak Kekayaan Intelektual</p>
+          <p class="mb-4">Semua aset desain, nama merek, logo kombinasi Pawon Mbok Kasti, ornamen visual, teks copywriting, dan dokumentasi foto di dalam website ini dilindungi penuh oleh Undang-Undang Hak Cipta Indonesia. Dilarang menduplikasi untuk komersialisasi tanpa seizin manajemen tertulis.</p>
+          
+          <p class="font-bold text-primary mb-2">4. Batasan Tanggung Jawab</p>
+          <p>Daftar harga hidangan dan ketersediaan menu di atas dapat berubah sewaktu-waktu menyesuaikan kondisi stok pasar tanpa pemberitahuan tertulis terlebih dahulu.</p>
+        `,
+        },
+      };
+
+      window.openModal = function (type) {
+        const doc = legalTexts[type];
+        if (doc) {
+          legalTitle.textContent = doc.title;
+          legalBody.innerHTML = doc.body;
+          legalModal.classList.remove("hidden");
+          legalModal.classList.add("flex");
+          document.body.classList.add("overflow-hidden");
+        }
+      };
+
+      window.closeModal = function () {
+        legalModal.classList.remove("flex");
+        legalModal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      };
+
+      legalModal.addEventListener("click", (e) => {
+        if (e.target === legalModal) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
