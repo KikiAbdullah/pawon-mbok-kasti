@@ -656,7 +656,7 @@ a {
   transform: translateY(-3px);
 }
 
-/* ---- Hamburger Button (tetap) ---- */
+/* ---- Hamburger Button ---- */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -694,7 +694,7 @@ a {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ---- Responsive ---- */
+/* ---- Responsive Mobile Menu ---- */
 @media (min-width: 1024px) {
   .mobile-overlay,
   .mobile-drawer,
@@ -1396,23 +1396,8 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
-.highlight-card {
-  background: var(--color-white);
-  border-radius: var(--radius-md);
-  padding: 2.5rem 2rem;
-  text-align: center;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-card);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.highlight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-elevated);
-}
 
-/* ---- Glassmorphism premium (juga untuk menu & form) ---- */
-.reservasi-form-card,
-.menu-card {
+.highlight-card {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1420,9 +1405,13 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.menu-card:hover {
+
+.highlight-card:hover {
   background: rgba(255, 255, 255, 0.8);
   transform: translateY(-12px) scale(1.01);
   box-shadow: 0 40px 80px -15px rgba(163, 107, 50, 0.3),
@@ -1499,6 +1488,29 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
 }
+
+/* ---- Glassmorphism untuk menu card ---- */
+.menu-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-card:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 40px 80px -15px rgba(163, 107, 50, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(163, 107, 50, 0.3);
+}
+
 .menu-card .relative {
   position: relative;
   height: 200px;
@@ -1954,7 +1966,23 @@ a {
 .reservasi-form-card {
   padding: 2.5rem;
   border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+.reservasi-form-card:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 35px 80px -15px rgba(163, 107, 50, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(163, 107, 50, 0.2);
+}
+
 .reservasi-form {
   display: flex;
   flex-direction: column;
@@ -2442,9 +2470,7 @@ a {
   color: var(--color-gold-light);
 }
 
-/* ==================== GOOGLE REVIEWS WIDGET - PREMIUM STYLING ==================== */
-
-/* Container utama widget */
+/* ==================== GOOGLE REVIEWS WIDGET ==================== */
 .google-reviews-widget {
   position: relative;
   padding: 2rem 0;
@@ -2452,7 +2478,6 @@ a {
   overflow: hidden;
 }
 
-/* Efek background glassmorphism di belakang widget */
 .google-reviews-widget::before {
   content: "";
   position: absolute;
@@ -2468,7 +2493,6 @@ a {
   border-radius: var(--radius-xl);
 }
 
-/* Wrapper untuk widget */
 .elfsight-widget-wrapper {
   position: relative;
   z-index: 1;
@@ -2491,7 +2515,6 @@ a {
   border-color: rgba(163, 107, 50, 0.2);
 }
 
-/* Judul widget */
 .reviews-widget-title {
   display: flex;
   align-items: center;
@@ -2583,7 +2606,6 @@ a {
   text-align: center;
 }
 
-/* Logo wrapper with glow */
 .loading-logo-wrapper {
   position: relative;
   width: 120px;
@@ -2600,7 +2622,6 @@ a {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Circular progress ring */
 .loading-ring {
   position: absolute;
   inset: -10px;
@@ -2617,7 +2638,6 @@ a {
   }
 }
 
-/* Pulse dots around ring */
 .loading-dots {
   position: absolute;
   inset: -20px;
@@ -2671,7 +2691,6 @@ a {
   }
 }
 
-/* Loading text */
 .loading-text {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.4rem;
@@ -2702,7 +2721,6 @@ a {
   }
 }
 
-/* Subtle shimmer on background */
 .loading-shimmer {
   position: absolute;
   inset: 0;
@@ -2726,17 +2744,6 @@ a {
   }
 }
 
-/* Responsive */
-@media (max-width: 640px) {
-  .loading-logo-wrapper {
-    width: 90px;
-    height: 90px;
-  }
-  .loading-text {
-    font-size: 1rem;
-  }
-}
-
 /* ==================== RESPONSIVE ==================== */
 @media (min-width: 1024px) {
   .nav-desktop {
@@ -2746,6 +2753,7 @@ a {
     display: none;
   }
 }
+
 @media (max-width: 1024px) {
   .tentang-grid,
   .reservasi-grid,
@@ -2757,7 +2765,6 @@ a {
   .form-row-3 {
     grid-template-columns: 1fr 1fr;
   }
-  /* ---- Penyesuaian asimetris ---- */
   .tentang-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -2803,6 +2810,7 @@ a {
     transform: translate(-50%, -50%);
   }
 }
+
 @media (max-width: 640px) {
   .form-row {
     grid-template-columns: 1fr;
@@ -2829,9 +2837,6 @@ a {
   .reservasi-form-card {
     padding: 1.5rem;
   }
-  .karir-form-card {
-    padding: 1.5rem;
-  }
   .hero-dots {
     right: 1rem;
     bottom: 1.5rem;
@@ -2853,7 +2858,6 @@ a {
     right: 1rem;
     bottom: 5rem;
   }
-  /* ---- Upgrade tambahan ---- */
   .hero-glow-orb {
     display: none;
   }
@@ -2887,5 +2891,30 @@ a {
   }
   .card-3 {
     min-width: 100px;
+  }
+  .loading-logo-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+  .loading-text {
+    font-size: 1rem;
+  }
+  .reviews-widget-title {
+    flex-wrap: wrap;
+  }
+  .reviews-widget-title .rating-summary {
+    margin-left: 0;
+    width: 100%;
+  }
+  .elfsight-widget-wrapper {
+    padding: 1rem 1rem 0.25rem;
+  }
+  .reviews-widget-title h3 {
+    font-size: 1.2rem;
+  }
+  .reviews-widget-title .title-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
   }
 }
