@@ -170,6 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initAboutTabs();
   initReducedMotion();
   updateOperationalStatus();
+  initHeroSlideshowModern();
+  initScrollReveal();
   setInterval(updateOperationalStatus, 60000);
 });
 
@@ -274,6 +276,42 @@ function initHeroSlideshow() {
   }
   dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
   setInterval(() => show((index + 1) % slides.length), 5000);
+}
+
+// ==================== HERO SLIDESHOW MODERN ====================
+function initHeroSlideshowModern() {
+  const slides = document.querySelectorAll(".hero-modern-bg .hero-slide");
+  if (!slides.length) return;
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle("active", i === index);
+    });
+  }
+
+  // Auto slide
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 5000);
+}
+
+// ==================== SCROLL REVEAL (Intersection Observer) ====================
+function initScrollReveal() {
+  const elements = document.querySelectorAll("[data-reveal]");
+  if (!elements.length) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
+  );
+  elements.forEach((el) => observer.observe(el));
 }
 
 // ==================== MENU ====================

@@ -350,7 +350,6 @@
             >Testimoni</a
           >
           <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
-          <a href="#karir" class="nav-link" data-section="karir">Karir</a>
           <a href="#kontak" class="nav-link" data-section="kontak">Kontak</a>
         </nav>
 
@@ -389,7 +388,6 @@
           <a href="#galeri" class="mobile-nav-link">Galeri</a>
           <a href="#testimoni" class="mobile-nav-link">Testimoni</a>
           <a href="#faq" class="mobile-nav-link">FAQ</a>
-          <a href="#karir" class="mobile-nav-link">Karir</a>
           <a href="#kontak" class="mobile-nav-link">Kontak</a>
         </nav>
         <div class="mobile-drawer-bottom">
@@ -401,10 +399,10 @@
       </div>
     </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section id="beranda" class="hero" aria-label="Hero Section">
-      <!-- Video Background Fallback dengan Slideshow -->
-      <div class="hero-bg">
+    <!-- ==================== HERO MODERN 2026 ==================== -->
+    <section id="beranda" class="hero-modern" aria-label="Hero Section">
+      <!-- Background Slideshow -->
+      <div class="hero-modern-bg">
         <div
           class="hero-slide active"
           style="background-image: url('assets/images/gallery/1.jpg')"
@@ -417,80 +415,79 @@
           class="hero-slide"
           style="background-image: url('assets/images/gallery/3.jpg')"
         ></div>
-        <div class="hero-overlay"></div>
-        <!-- Floating Smoke Effect -->
-        <div class="hero-smoke" aria-hidden="true"></div>
-        <div class="hero-smoke hero-smoke-delayed" aria-hidden="true"></div>
-        <!-- Animated Gold Pattern -->
-        <div class="hero-gold-pattern" aria-hidden="true"></div>
+        <div class="hero-overlay-modern"></div>
+        <!-- Efek grain dinamis -->
+        <div class="hero-grain" aria-hidden="true"></div>
       </div>
 
-      <!-- Hero Content -->
-      <div class="hero-content">
-        <span class="hero-subtitle">✦ Prasmanan Jawa & Coffee Shop ✦</span>
-        <h1 class="hero-title">Pawon Mbok Kasti</h1>
-        <p class="hero-desc">
-          "Mau makan? Bisa. Ngopi saja? Bisa. Atau makan, ngopi ditemani live
-          music? Bisa banget!"
-        </p>
-
-        <!-- Quick Info Badges -->
-        <div class="hero-badges">
-          <span class="hero-badge"
-            ><span class="pulse-dot"></span> Open Today</span
-          >
-          <span class="hero-badge">★★★★☆ 4.9</span>
-          <span class="hero-badge">1200+ Reviews</span>
-          <span class="hero-badge">Since 2021</span>
+      <!-- Konten Hero -->
+      <div class="hero-modern-content container">
+        <!-- Kiri: Teks -->
+        <div class="hero-modern-text" data-reveal="left">
+          <span class="hero-modern-badge">
+            <i class="fa-regular fa-star"></i> Prasmanan Jawa & Coffee Shop
+          </span>
+          <h1 class="hero-modern-title">Pawon <br /><span>Mbok Kasti</span></h1>
+          <p class="hero-modern-desc">
+            “Mau makan? Bisa. Ngopi saja? Bisa. Atau makan, ngopi ditemani live
+            music? Bisa banget!”
+          </p>
+          <div class="hero-modern-cta">
+            <a href="#reservasi" class="btn-primary-modern">
+              Reservasi <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#menu" class="btn-secondary-modern">
+              <i class="fa-regular fa-compass"></i> Jelajahi Menu
+            </a>
+          </div>
+          <!-- Social Proof + Stat -->
+          <div class="hero-modern-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-label">1.200+ Review</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Sejak 2021</span>
+              <span class="stat-label">Keluarga & Kolektif</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100% Halal</span>
+              <span class="stat-label">Bahan Segar</span>
+            </div>
+          </div>
         </div>
 
-        <!-- CTA Buttons -->
-        <div class="hero-cta">
-          <a href="#reservasi" class="btn-primary-hero">
-            <i class="fa-solid fa-calendar-check"></i> Reserve Table
-          </a>
-          <a href="#menu" class="btn-secondary-hero">
-            <i class="fa-solid fa-utensils"></i> View Menu
-          </a>
-          <a href="#galeri" class="btn-outline-hero">
-            <i class="fa-solid fa-images"></i> Explore Gallery
-          </a>
-          <a href="#tentang" class="btn-outline-hero">
-            <i class="fa-solid fa-play"></i> Watch Story
-          </a>
+        <!-- Kanan: Visual Interaktif -->
+        <div class="hero-modern-visual" data-reveal="right">
+          <!-- Floating Card 1 -->
+          <div class="hero-float-card card-1">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Prasmanan</span>
+            <small>10+ menu harian</small>
+          </div>
+          <!-- Floating Card 2 -->
+          <div class="hero-float-card card-2">
+            <i class="fa-solid fa-music"></i>
+            <span>Live Music</span>
+            <small>Setiap Sabtu</small>
+          </div>
+          <!-- Floating Card 3 -->
+          <div class="hero-float-card card-3">
+            <i class="fa-solid fa-wifi"></i>
+            <span>Work From Cafe</span>
+            <small>Wi-Fi 100 Mbps</small>
+          </div>
+          <!-- Elemen dekoratif -->
+          <div class="hero-orb orb-1"></div>
+          <div class="hero-orb orb-2"></div>
+          <div class="hero-orb orb-3"></div>
         </div>
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-indicator-modern" aria-hidden="true">
         <span>Scroll</span>
-        <div class="scroll-indicator-line"></div>
-      </div>
-
-      <!-- Hero Dot Navigation -->
-      <div
-        class="hero-dots"
-        role="tablist"
-        aria-label="Hero Slideshow Navigation"
-      >
-        <button
-          class="hero-dot active"
-          role="tab"
-          aria-selected="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          class="hero-dot"
-          role="tab"
-          aria-selected="false"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          class="hero-dot"
-          role="tab"
-          aria-selected="false"
-          aria-label="Slide 3"
-        ></button>
+        <div class="scroll-line"></div>
       </div>
     </section>
 
@@ -1095,111 +1092,6 @@
       </div>
     </section>
 
-    <!-- ==================== KARIR SECTION ==================== -->
-    <section id="karir" class="section karir" aria-labelledby="karir-title">
-      <div class="container">
-        <div class="section-intro">
-          <span class="section-label">— Bergabung Bersama Kami —</span>
-          <h2 id="karir-title" class="section-title">Lowongan Pekerjaan</h2>
-          <div class="section-divider"></div>
-          <p class="section-desc">
-            Miliki passion di industri F&B dan ingin berkembang? Temukan
-            lowongan impian Anda di Pawon Mbok Kasti!
-          </p>
-        </div>
-
-        <div class="karir-grid">
-          <!-- Jobs List -->
-          <div class="karir-jobs">
-            <h3><i class="fa-solid fa-briefcase"></i> Posisi Tersedia</h3>
-            <div id="jobs-list" class="jobs-list">
-              <!-- Rendered by JS -->
-            </div>
-          </div>
-
-          <!-- Application Form -->
-          <div class="karir-form-card">
-            <h3><i class="fa-solid fa-file-signature"></i> Formulir Lamaran</h3>
-            <p class="karir-form-desc">
-              Isi formulir dengan lengkap dan lampirkan tautan CV digital Anda
-              yang dapat diakses.
-            </p>
-
-            <form id="career-form" class="career-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="career-name">Nama Lengkap *</label>
-                  <input
-                    type="text"
-                    id="career-name"
-                    required
-                    placeholder="Nama lengkap Anda..."
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="career-email">Alamat Email *</label>
-                  <input
-                    type="email"
-                    id="career-email"
-                    required
-                    placeholder="Contoh: andi@gmail.com"
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="career-phone">No. Telepon/WhatsApp *</label>
-                  <input
-                    type="tel"
-                    id="career-phone"
-                    required
-                    placeholder="Format: 081234567xxx"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="career-position">Posisi Pekerjaan *</label>
-                  <select id="career-position" required>
-                    <option value="" disabled selected>Pilih posisi...</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="career-cv">Link CV / Portofolio (opsional)</label>
-                <input
-                  type="url"
-                  id="career-cv"
-                  placeholder="Tautan Google Drive, LinkedIn, dll."
-                />
-              </div>
-              <div class="form-group">
-                <label for="career-message"
-                  >Ceritakan Tentang Diri Anda (opsional)</label
-                >
-                <textarea
-                  id="career-message"
-                  rows="4"
-                  placeholder="Ceritakan singkat motivasi dan keahlian utama Anda..."
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-submit-career">
-                <i class="fa-solid fa-paper-plane"></i> Kirim Berkas Lamaran
-              </button>
-              <div id="career-success" class="form-success hidden">
-                <i class="fa-solid fa-circle-check"></i> Lamaran berhasil
-                dikirim! Kami akan menghubungi Anda melalui email atau WhatsApp.
-                Terima kasih!
-              </div>
-              <div id="career-error" class="form-error hidden">
-                <i class="fa-solid fa-circle-xmark"></i> Maaf, terjadi gangguan
-                sistem. Silakan coba lagi atau kirim CV manual ke
-                pawonmbokkasti@gmail.com.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ==================== KONTAK & LOKASI SECTION ==================== -->
     <section id="kontak" class="section kontak" aria-labelledby="kontak-title">
       <div class="container">
@@ -1331,7 +1223,6 @@
               ><i class="fa-solid fa-chevron-right"></i> Testimoni</a
             >
             <a href="#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a>
-            <a href="#karir"><i class="fa-solid fa-chevron-right"></i> Karir</a>
             <a href="#kontak"
               ><i class="fa-solid fa-chevron-right"></i> Kontak</a
             >
