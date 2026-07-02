@@ -1,3 +1,8 @@
+// ============================================================
+//  PAWON MBOK KASTI — MAIN JAVASCRIPT
+//  Versi 2026 — Full Upgrade Visual & Interaktif
+// ============================================================
+
 // ==================== DATA ====================
 const menuItems = [
   {
@@ -160,9 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTestimonialSlider();
   initFAQ();
   initCountdown();
-  initCareer();
   initReservationForm();
-  initCareerForm();
   initBackToTop();
   initNewsletter();
   initCounterAnimation();
@@ -172,18 +175,54 @@ document.addEventListener("DOMContentLoaded", () => {
   updateOperationalStatus();
   initHeroSlideshowModern();
   initScrollReveal();
+  initMagneticTilt(); // <--- Efek tilt baru
+  initDarkMode(); // <--- Dark mode toggle (opsional, jika tombol ada)
   setInterval(updateOperationalStatus, 60000);
 });
 
 // ==================== LOADER ====================
+// ==================== LOADER ====================
 function initLoader() {
   const loader = document.getElementById("loading-screen");
+  const progressBar = document.getElementById("loading-progress-bar");
   if (!loader) return;
+
+  // Optional: animasi progress bar (simulasi)
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.random() * 8 + 2;
+    if (progress > 95) progress = 95;
+    if (progressBar) progressBar.style.width = progress + "%";
+  }, 200);
+
+  // Pesan berganti (opsional)
+  const messages = [
+    "Menyiapkan kehangatan...",
+    "Meracik cita rasa...",
+    "Menghidangkan kenangan...",
+    "Siap menyambut Anda!",
+  ];
+  let msgIndex = 0;
+  const msgEl = document.getElementById("loading-message");
+  const msgInterval = setInterval(() => {
+    if (msgEl) {
+      msgIndex = (msgIndex + 1) % messages.length;
+      msgEl.style.opacity = "0";
+      setTimeout(() => {
+        msgEl.textContent = messages[msgIndex];
+        msgEl.style.opacity = "1";
+      }, 300);
+    }
+  }, 1200);
+
   window.addEventListener("load", () => {
+    clearInterval(interval);
+    clearInterval(msgInterval);
+    if (progressBar) progressBar.style.width = "100%";
+
     setTimeout(() => {
-      loader.style.opacity = "0";
-      loader.style.transition = "opacity 0.5s";
-      setTimeout(() => loader.remove(), 500);
+      loader.classList.add("hidden");
+      setTimeout(() => loader.remove(), 700);
     }, 800);
   });
 }
@@ -261,7 +300,7 @@ function initActiveNav() {
   });
 }
 
-// ==================== HERO SLIDESHOW ====================
+// ==================== HERO SLIDESHOW (classic) ====================
 function initHeroSlideshow() {
   const slides = document.querySelectorAll(".hero-slide");
   const dots = document.querySelectorAll(".hero-dot");
@@ -283,14 +322,11 @@ function initHeroSlideshowModern() {
   const slides = document.querySelectorAll(".hero-modern-bg .hero-slide");
   if (!slides.length) return;
   let current = 0;
-
   function showSlide(index) {
     slides.forEach((s, i) => {
       s.classList.toggle("active", i === index);
     });
   }
-
-  // Auto slide
   setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
@@ -334,7 +370,9 @@ function initMenu() {
         (item) => `
             <div class="menu-card">
               <div class="relative">
-                <img src="${item.image}" alt="${item.name}" loading="lazy" />
+                <img src="${item.image}" alt="${
+          item.name
+        }" loading="lazy" decoding="async" />
                 ${item.badge ? `<span class="badge">${item.badge}</span>` : ""}
               </div>
               <div class="p-5">
@@ -385,7 +423,7 @@ function initGallery() {
       .map(
         (item, idx) => `
             <div class="gallery-item cursor-pointer" onclick="openLightbox(${idx})">
-              <img src="${item.image}" alt="${item.title}" loading="lazy" />
+              <img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async" />
             </div>
           `
       )
@@ -535,39 +573,6 @@ function initCountdown() {
   }, 1000);
 }
 
-// ==================== CAREER ====================
-function initCareer() {
-  const list = document.getElementById("jobs-list");
-  const select = document.getElementById("career-position");
-  if (!list) return;
-  list.innerHTML = jobs
-    .map(
-      (job) => `
-          <div class="job-card">
-            <div>
-              <h4>${job.title}</h4>
-              <p>${job.qualification}</p>
-            </div>
-            <button onclick="applyForJob('${job.title}')">Lamar</button>
-          </div>
-        `
-    )
-    .join("");
-  if (select) {
-    jobs.forEach((j) => {
-      const opt = document.createElement("option");
-      opt.value = j.title;
-      opt.textContent = j.title;
-      select.appendChild(opt);
-    });
-  }
-}
-window.applyForJob = (title) => {
-  const select = document.getElementById("career-position");
-  if (select) select.value = title;
-  document.getElementById("karir").scrollIntoView({ behavior: "smooth" });
-};
-
 // ==================== RESERVATION FORM ====================
 function initReservationForm() {
   const form = document.getElementById("reservation-form");
@@ -586,25 +591,6 @@ function initReservationForm() {
       `https://wa.me/6282342707766?text=${encodeURIComponent(msg)}`,
       "_blank"
     );
-  });
-}
-
-// ==================== CAREER FORM ====================
-function initCareerForm() {
-  const form = document.getElementById("career-form");
-  if (!form) return;
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const success = document.getElementById("career-success");
-    const error = document.getElementById("career-error");
-    if (success) {
-      success.classList.remove("hidden");
-      if (error) error.classList.add("hidden");
-    }
-    setTimeout(() => {
-      if (success) success.classList.add("hidden");
-      form.reset();
-    }, 5000);
   });
 }
 
@@ -686,33 +672,23 @@ function initAboutTabs() {
     visi: document.getElementById("tab-visi"),
     filosofi: document.getElementById("tab-filosofi"),
   };
-
   if (tabs.length === 0) return;
-
   function activateTab(tabId) {
-    // Sembunyikan semua konten
     Object.values(contents).forEach((el) => {
       if (el) el.classList.add("hidden");
     });
-
-    // Tampilkan konten yang dipilih
     const target = contents[tabId];
     if (target) target.classList.remove("hidden");
-
-    // Update class active pada tombol
     tabs.forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.tab === tabId);
     });
   }
-
   tabs.forEach((btn) => {
     btn.addEventListener("click", () => {
       const tabId = btn.dataset.tab;
       activateTab(tabId);
     });
   });
-
-  // Aktifkan tab pertama secara default (visi)
   activateTab("visi");
 }
 
@@ -756,7 +732,6 @@ window.copyToClipboard = (text) => {
       }
     });
   } else {
-    // Fallback
     const input = document.createElement("input");
     input.value = text;
     document.body.appendChild(input);
@@ -808,3 +783,67 @@ window.closeModal = () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
+
+// ==================== MAGNETIC TILT EFFECT (UPGRADE 2026) ====================
+function initMagneticTilt() {
+  const cards = document.querySelectorAll(".menu-card, .highlight-card");
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    // Reset transisi saat mouse masuk agar responsif
+    card.addEventListener("mouseenter", () => {
+      card.style.transition = "none";
+    });
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      // Batas kemiringan maksimum 10 derajat
+      const rotateY = ((x - centerX) / centerX) * 10;
+      const rotateX = ((centerY - y) / centerY) * 10;
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transition = "transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)";
+      card.style.transform =
+        "perspective(800px) rotateX(0) rotateY(0) scale(1)";
+    });
+  });
+}
+
+// ==================== DARK MODE TOGGLE (OPSIONAL) ====================
+function initDarkMode() {
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+
+  // Cek preferensi tersimpan atau sistem
+  const currentTheme =
+    localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  toggle.addEventListener("click", () => {
+    const theme =
+      document.documentElement.getAttribute("data-theme") === "light"
+        ? "dark"
+        : "light";
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  });
+}
+
+// ==================== PWA SERVICE WORKER REGISTRATION (Opsional) ====================
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((reg) => console.log("SW registered:", reg))
+      .catch((err) => console.log("SW registration failed:", err));
+  });
+}

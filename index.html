@@ -61,7 +61,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
       rel="stylesheet"
     />
 
@@ -74,7 +74,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN (hanya untuk utility dasar) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -120,8 +120,10 @@
       };
     </script>
 
-    <!-- External CSS -->
+    <!-- External CSS (style.css sudah berisi upgrade visual) -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Tambahan inline style untuk efek baru yang belum ada di style.css -->
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
@@ -146,7 +148,6 @@
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -154,7 +155,7 @@
       gtag("config", "G-XXXXXXXXXX");
     </script>
 
-    <!-- Structured Data JSON-LD -->
+    <!-- Structured Data JSON-LD (sama seperti sebelumnya) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -284,23 +285,26 @@
       }
     </script>
   </head>
+
   <body
     class="bg-cream text-charcoal font-sans antialiased overflow-x-hidden"
     itemscope
     itemtype="https://schema.org/WebPage"
   >
-    <!-- ==================== ANIMATED LOADING SCREEN ==================== -->
-    <div
-      id="loading-screen"
-      class="fixed inset-0 z-[9999] bg-primary flex items-center justify-center transition-all duration-700"
-      aria-hidden="true"
-    >
-      <div class="flex flex-col items-center gap-6">
-        <img
-          src="assets/images/logo/logo.png"
-          alt="Pawon Mbok Kasti"
-          class="w-28 h-auto animate-float"
-        />
+    <!-- ==================== LOADING SCREEN PREMIUM ==================== -->
+    <div id="loading-screen" aria-hidden="true">
+      <div class="loading-shimmer"></div>
+      <div class="loading-content">
+        <div class="loading-logo-wrapper">
+          <img src="assets/images/logo/logo.png" alt="Pawon Mbok Kasti" />
+          <div class="loading-ring"></div>
+          <div class="loading-dots">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="loading-text">
+          <span>Menyiapkan kehangatan...</span>
+        </div>
       </div>
     </div>
 
@@ -321,10 +325,9 @@
     <!-- Accessibility Skip Link -->
     <a href="#beranda" class="skip-link">Lewati ke Konten Utama</a>
 
-    <!-- ==================== HEADER SECTION ==================== -->
+    <!-- ==================== HEADER ==================== -->
     <header id="header" class="header" role="banner">
       <div class="header-inner">
-        <!-- Brand Logo (sekarang pakai gambar) -->
         <a
           href="#beranda"
           class="brand-logo"
@@ -337,7 +340,6 @@
           />
         </a>
 
-        <!-- Desktop Navigation -->
         <nav class="nav-desktop" role="navigation" aria-label="Navigasi Utama">
           <a href="#beranda" class="nav-link active" data-section="beranda"
             >Beranda</a
@@ -353,7 +355,6 @@
           <a href="#kontak" class="nav-link" data-section="kontak">Kontak</a>
         </nav>
 
-        <!-- Right Actions -->
         <div class="header-actions">
           <span
             id="status-badge"
@@ -365,7 +366,6 @@
           </a>
         </div>
 
-        <!-- Hamburger -->
         <button
           id="menu-toggle"
           class="hamburger"
@@ -378,7 +378,6 @@
         </button>
       </div>
 
-      <!-- Mobile Drawer -->
       <div id="mobile-menu" class="mobile-drawer" aria-hidden="true">
         <nav class="mobile-nav-links">
           <a href="#beranda" class="mobile-nav-link">Beranda</a>
@@ -399,7 +398,7 @@
       </div>
     </header>
 
-    <!-- ==================== HERO MODERN 2026 ==================== -->
+    <!-- ==================== HERO MODERN 2026 (DENGAN ORBS) ==================== -->
     <section id="beranda" class="hero-modern" aria-label="Hero Section">
       <!-- Background Slideshow -->
       <div class="hero-modern-bg">
@@ -416,12 +415,21 @@
           style="background-image: url('assets/images/gallery/3.jpg')"
         ></div>
         <div class="hero-overlay-modern"></div>
-        <!-- Efek grain dinamis -->
         <div class="hero-grain" aria-hidden="true"></div>
       </div>
 
       <!-- Konten Hero -->
       <div class="hero-modern-content container">
+        <!-- Ambient Glow Orbs (ditempatkan di belakang teks) -->
+        <div
+          class="hero-glow-orb orb-utama"
+          style="top: -20%; right: -10%"
+        ></div>
+        <div
+          class="hero-glow-orb orb-sekunder"
+          style="bottom: -10%; left: -5%"
+        ></div>
+
         <!-- Kiri: Teks -->
         <div class="hero-modern-text" data-reveal="left">
           <span class="hero-modern-badge">
@@ -440,7 +448,6 @@
               <i class="fa-regular fa-compass"></i> Jelajahi Menu
             </a>
           </div>
-          <!-- Social Proof + Stat -->
           <div class="hero-modern-stats">
             <div class="stat-item">
               <span class="stat-number">4.9★</span>
@@ -459,25 +466,21 @@
 
         <!-- Kanan: Visual Interaktif -->
         <div class="hero-modern-visual" data-reveal="right">
-          <!-- Floating Card 1 -->
           <div class="hero-float-card card-1">
             <i class="fa-solid fa-utensils"></i>
             <span>Prasmanan</span>
             <small>10+ menu harian</small>
           </div>
-          <!-- Floating Card 2 -->
           <div class="hero-float-card card-2">
             <i class="fa-solid fa-music"></i>
             <span>Live Music</span>
             <small>Setiap Sabtu</small>
           </div>
-          <!-- Floating Card 3 -->
           <div class="hero-float-card card-3">
             <i class="fa-solid fa-wifi"></i>
             <span>Work From Cafe</span>
             <small>Wi-Fi 100 Mbps</small>
           </div>
-          <!-- Elemen dekoratif -->
           <div class="hero-orb orb-1"></div>
           <div class="hero-orb orb-2"></div>
           <div class="hero-orb orb-3"></div>
@@ -491,22 +494,24 @@
       </div>
     </section>
 
-    <!-- SVG Divider -->
+    <!-- ==================== SVG DIVIDER (BERGELOMBANG DENGAN GARIS EMAS) ==================== -->
     <div class="svg-divider" aria-hidden="true">
-      <svg
-        viewBox="0 0 1440 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path
-          d="M0 40C240 80 480 0 720 30C960 60 1200 10 1440 50V100H0V40Z"
+          d="M0,40 C480,120 960,0 1440,60 L1440,120 L0,120 Z"
           fill="#FFF8EF"
+        />
+        <path
+          d="M0,45 C480,125 960,5 1440,65"
+          stroke="#a36b32"
+          stroke-width="2"
+          fill="none"
+          opacity="0.4"
         />
       </svg>
     </div>
 
-    <!-- ==================== HIGHLIGHTS SECTION ==================== -->
+    <!-- ==================== HIGHLIGHTS ==================== -->
     <section
       id="highlights"
       class="section highlights"
@@ -524,7 +529,6 @@
             dengan kenyamanan modern masa kini.
           </p>
         </div>
-
         <div class="highlights-grid">
           <div class="highlight-card" data-animate>
             <div class="highlight-icon">
@@ -537,9 +541,7 @@
             </p>
           </div>
           <div class="highlight-card" data-animate>
-            <div class="highlight-icon">
-              <i class="fa-solid fa-music"></i>
-            </div>
+            <div class="highlight-icon"><i class="fa-solid fa-music"></i></div>
             <h3>Live Music</h3>
             <p>
               Nikmati pertunjukan musik akhir pekan bertema klasik untuk
@@ -547,9 +549,7 @@
             </p>
           </div>
           <div class="highlight-card" data-animate>
-            <div class="highlight-icon">
-              <i class="fa-solid fa-laptop"></i>
-            </div>
+            <div class="highlight-icon"><i class="fa-solid fa-laptop"></i></div>
             <h3>Work From Cafe</h3>
             <p>
               Dilengkapi koneksi Wi-Fi super cepat serta stop kontak melimpah di
@@ -557,9 +557,7 @@
             </p>
           </div>
           <div class="highlight-card" data-animate>
-            <div class="highlight-icon">
-              <i class="fa-solid fa-camera"></i>
-            </div>
+            <div class="highlight-icon"><i class="fa-solid fa-camera"></i></div>
             <h3>Instagramable Spot</h3>
             <p>
               Setiap sudut dipoles dengan estetika Joglo klasik khas yang
@@ -570,22 +568,24 @@
       </div>
     </section>
 
-    <!-- SVG Divider -->
+    <!-- ==================== SVG DIVIDER FLIP ==================== -->
     <div class="svg-divider svg-divider-flip" aria-hidden="true">
-      <svg
-        viewBox="0 0 1440 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path
-          d="M0 40C240 80 480 0 720 30C960 60 1200 10 1440 50V100H0V40Z"
+          d="M0,40 C480,120 960,0 1440,60 L1440,120 L0,120 Z"
           fill="#FFF8EF"
+        />
+        <path
+          d="M0,45 C480,125 960,5 1440,65"
+          stroke="#a36b32"
+          stroke-width="2"
+          fill="none"
+          opacity="0.4"
         />
       </svg>
     </div>
 
-    <!-- ==================== MENU SECTION ==================== -->
+    <!-- ==================== MENU ==================== -->
     <section id="menu" class="section menu" aria-labelledby="menu-title">
       <div class="container">
         <div class="section-intro">
@@ -598,7 +598,6 @@
           </p>
         </div>
 
-        <!-- Filter & Search -->
         <div class="menu-controls">
           <div class="menu-filters">
             <button class="filter-btn active" data-category="Semua">
@@ -625,14 +624,13 @@
           </div>
         </div>
 
-        <!-- Menu Grid -->
         <div id="menu-grid" class="menu-grid">
           <!-- Rendered by JS -->
         </div>
       </div>
     </section>
 
-    <!-- ==================== EVENT SECTION ==================== -->
+    <!-- ==================== EVENT ==================== -->
     <section id="event" class="section event" aria-labelledby="event-title">
       <div class="event-overlay"></div>
       <div class="event-content">
@@ -647,7 +645,6 @@
           legendaris era 80-an, 90-an, hingga 2000-an.
         </p>
 
-        <!-- Countdown -->
         <div
           class="countdown"
           id="countdown"
@@ -669,14 +666,14 @@
 
         <button
           onclick="orderDirect('Event Classic Vibes')"
-          class="btn-primary-hero mt-6"
+          class="btn-primary-modern mt-6"
         >
           <i class="fa-solid fa-calendar-days"></i> Book Now
         </button>
       </div>
     </section>
 
-    <!-- ==================== TENTANG KAMI SECTION ==================== -->
+    <!-- ==================== TENTANG (Asimetris) ==================== -->
     <section
       id="tentang"
       class="section tentang"
@@ -684,7 +681,6 @@
     >
       <div class="container">
         <div class="tentang-grid">
-          <!-- Left Image -->
           <div class="tentang-image-wrapper" data-animate>
             <div class="tentang-frame-top-left"></div>
             <div class="tentang-frame-bottom-right"></div>
@@ -696,7 +692,6 @@
             />
           </div>
 
-          <!-- Right Content -->
           <div class="tentang-content" data-animate>
             <span class="section-label">— Kehangatan Joglo Vintage —</span>
             <h2 id="tentang-title" class="section-title">
@@ -719,7 +714,6 @@
               </p>
             </div>
 
-            <!-- Counter Stats -->
             <div class="counter-grid">
               <div class="counter-item" data-animate>
                 <span class="counter-value" data-count="100">100K+</span>
@@ -739,7 +733,6 @@
               </div>
             </div>
 
-            <!-- Tabs -->
             <div class="about-tabs-wrapper">
               <div class="about-tabs">
                 <button class="about-tab active" data-tab="visi">
@@ -778,7 +771,7 @@
       </div>
     </section>
 
-    <!-- ==================== GALLERY SECTION ==================== -->
+    <!-- ==================== GALERI ==================== -->
     <section id="galeri" class="section galeri" aria-labelledby="galeri-title">
       <div class="container">
         <div class="section-intro">
@@ -788,8 +781,6 @@
           </h2>
           <div class="section-divider"></div>
         </div>
-
-        <!-- Gallery Filters -->
         <div class="gallery-filters">
           <button class="gallery-filter-btn active" data-category="Semua">
             Semua
@@ -804,105 +795,52 @@
             Suasana
           </button>
         </div>
-
-        <!-- Masonry Gallery Grid -->
         <div id="gallery-grid" class="gallery-grid">
           <!-- Rendered by JS -->
         </div>
       </div>
     </section>
 
-    <!-- ==================== TESTIMONI SECTION ==================== -->
-    <section
-      id="testimoni"
-      class="section testimoni"
-      aria-labelledby="testimoni-title"
-    >
+    <!-- ==================== TESTIMONI ==================== -->
+    <!-- Google Reviews Widget Section -->
+    <section id="testimoni" class="section" aria-labelledby="reviews-title">
       <div class="container">
         <div class="section-intro">
-          <span class="section-label">— Testimoni Pelanggan —</span>
-          <h2 id="testimoni-title" class="section-title">Apa Kata Mereka?</h2>
+          <span class="section-label">— Ulasan Google —</span>
+          <h2 id="reviews-title" class="section-title">
+            Apa Kata Pelanggan Kami?
+          </h2>
           <div class="section-divider"></div>
         </div>
 
-        <!-- Testimonial Slider -->
-        <div class="testimoni-slider" id="testimoni-slider">
-          <div class="testimoni-track" id="testimoni-track">
-            <div class="testimoni-card">
-              <div class="testimoni-stars">★★★★★</div>
-              <p class="testimoni-text">
-                "Restonya keren, vibesnya vintage seperti didesa, kalau kesini
-                wajib banget cobain gado gado nya, bumbu kacangnya mantep
-                isiannya banyak, menu prasmanan nya bervarian, paling suka
-                pasmol ikan sihh harganya juga murah muran mantul, cocok untuk
-                makan sekeluarga"
-              </p>
-              <div class="testimoni-author">
-                <img
-                  src="https://picsum.photos/60/60?random=104"
-                  alt="Foto Rina"
-                  class="testimoni-avatar"
-                  loading="lazy"
-                />
-                <div>
-                  <strong>Amara Desiyati</strong>
-                  <span>Google Review — 2 hari lalu</span>
-                </div>
+        <div class="google-reviews-widget" data-reveal>
+          <div class="elfsight-widget-wrapper">
+            <!-- Title & Rating Summary -->
+            <div class="reviews-widget-title">
+              <span class="title-icon">
+                <i class="fa-regular fa-star"></i>
+              </span>
+              <h3>Ulasan Google</h3>
+              <div class="rating-summary">
+                <span class="stars">★★★★★</span>
+                <span class="score">4.6</span>
+                <span>(50 ulasan)</span>
               </div>
             </div>
-            <div class="testimoni-card">
-              <div class="testimoni-stars">★★★★★</div>
-              <p class="testimoni-text">
-                "Makanannya enak, murah2, banyak pilihannya juga 😍 Klo kesini
-                cobain matcha nya 🔥 Untuk parkiran luas motor mobil semuanya
-                bisa masuk.."
-              </p>
-              <div class="testimoni-author">
-                <img
-                  src="https://picsum.photos/60/60?random=104"
-                  alt="Foto Budi"
-                  class="testimoni-avatar"
-                  loading="lazy"
-                />
-                <div>
-                  <strong>Prisma Vianca J.R</strong>
-                  <span>Google Review — 1 minggu lalu</span>
-                </div>
-              </div>
-            </div>
-            <div class="testimoni-card">
-              <div class="testimoni-stars">★★★★★</div>
-              <p class="testimoni-text">
-                "Makanan enak, bumbu medok, ada live musik keroncong, harga
-                terjangkau"
-              </p>
-              <div class="testimoni-author">
-                <img
-                  src="https://picsum.photos/60/60?random=104"
-                  alt="Foto Sari"
-                  class="testimoni-avatar"
-                  loading="lazy"
-                />
-                <div>
-                  <strong>Dian Arie Anggraeni</strong>
-                  <span>Google Review — 3 hari lalu</span>
-                </div>
-              </div>
-            </div>
+
+            <!-- Elfsight Widget -->
+            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div
+              class="elfsight-app-51d4d304-a97d-4278-aab1-7e3beba621b8"
+              data-elfsight-app-lazy
+            ></div>
           </div>
-          <!-- Slider Controls -->
-          <button class="testimoni-prev" aria-label="Testimoni sebelumnya">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="testimoni-next" aria-label="Testimoni berikutnya">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-          <div class="testimoni-dots" id="testimoni-dots"></div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== FAQ SECTION ==================== -->
+    <!-- ==================== FAQ ==================== -->
     <section id="faq" class="section faq" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-intro">
@@ -910,7 +848,6 @@
           <h2 id="faq-title" class="section-title">FAQ</h2>
           <div class="section-divider"></div>
         </div>
-
         <div class="faq-list">
           <div class="faq-item" data-animate>
             <button class="faq-question" aria-expanded="false">
@@ -969,7 +906,7 @@
       </div>
     </section>
 
-    <!-- ==================== RESERVASI SECTION ==================== -->
+    <!-- ==================== RESERVASI ==================== -->
     <section
       id="reservasi"
       class="section reservasi"
@@ -977,7 +914,6 @@
     >
       <div class="container">
         <div class="reservasi-grid">
-          <!-- Left Info -->
           <div class="reservasi-info" data-animate>
             <span class="section-label">— Cepat & Tanpa Antre —</span>
             <h2 id="reservasi-title" class="section-title">Reservasi Meja</h2>
@@ -988,8 +924,6 @@
               Anda. Sistem kami akan menyusun pesan otomatis ke admin WhatsApp
               kami.
             </p>
-
-            <!-- Manual WA -->
             <div class="wa-manual-card">
               <span class="wa-manual-label">Layanan Hubungi Manual</span>
               <p>
@@ -1013,7 +947,6 @@
             </div>
           </div>
 
-          <!-- Right Form -->
           <div class="reservasi-form-card" data-animate>
             <form id="reservation-form" class="reservasi-form">
               <div class="form-row">
@@ -1092,18 +1025,16 @@
       </div>
     </section>
 
-    <!-- ==================== KONTAK & LOKASI SECTION ==================== -->
+    <!-- ==================== KONTAK ==================== -->
     <section id="kontak" class="section kontak" aria-labelledby="kontak-title">
       <div class="container">
         <div class="kontak-grid">
-          <!-- Left Info -->
           <div class="kontak-info" data-animate>
             <span class="section-label">— Mari Berkunjung —</span>
             <h2 id="kontak-title" class="section-title">
               Informasi Kontak & Lokasi
             </h2>
             <div class="section-divider"></div>
-
             <div class="kontak-details">
               <div class="kontak-item">
                 <span class="kontak-icon"
@@ -1140,8 +1071,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Social Media -->
             <div class="kontak-social">
               <h4>Ikuti Kami Di Media Sosial</h4>
               <div class="social-icons">
@@ -1168,13 +1097,11 @@
               </div>
             </div>
           </div>
-
-          <!-- Right Map -->
           <div class="kontak-map-wrapper" data-animate>
             <iframe
               src="https://maps.google.com/maps?q=Pawon+Mbok+Kasti+Pandaan&t=&z=15&ie=UTF8&iwloc=&output=embed"
               class="kontak-map"
-              allowfullscreen=""
+              allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="Lokasi Pawon Mbok Kasti Pandaan"
@@ -1184,11 +1111,10 @@
       </div>
     </section>
 
-    <!-- ==================== FOOTER SECTION ==================== -->
+    <!-- ==================== FOOTER ==================== -->
     <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-grid">
-          <!-- Brand -->
           <div class="footer-brand">
             <a
               href="#beranda"
@@ -1207,8 +1133,6 @@
               kuno yang menawan dan asri.
             </p>
           </div>
-
-          <!-- Quick Links -->
           <div class="footer-links">
             <h4>Tautan Langsung</h4>
             <a href="#menu"><i class="fa-solid fa-chevron-right"></i> Menu</a>
@@ -1227,8 +1151,6 @@
               ><i class="fa-solid fa-chevron-right"></i> Kontak</a
             >
           </div>
-
-          <!-- Legal -->
           <div class="footer-legal">
             <h4>Legalitas</h4>
             <button onclick="openModal('privacy')">
@@ -1238,8 +1160,6 @@
               <i class="fa-solid fa-scale-balanced"></i> Syarat & Ketentuan
             </button>
           </div>
-
-          <!-- Newsletter -->
           <div class="footer-newsletter">
             <h4>Newsletter</h4>
             <p>Dapatkan info event dan promo terbaru!</p>
@@ -1256,8 +1176,6 @@
             </form>
           </div>
         </div>
-
-        <!-- Bottom Bar -->
         <div class="footer-bottom">
           <p>
             &copy; 2026 Pawon Mbok Kasti. Hak Cipta Dilindungi Undang-Undang.
@@ -1271,7 +1189,7 @@
       </div>
     </footer>
 
-    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <!-- ==================== FLOATING WHATSAPP ==================== -->
     <a
       href="https://wa.me/6282342707766"
       class="floating-wa"
@@ -1283,7 +1201,7 @@
       <span class="floating-wa-tooltip">Chat Kami!</span>
     </a>
 
-    <!-- ==================== BACK TO TOP BUTTON ==================== -->
+    <!-- ==================== BACK TO TOP ==================== -->
     <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">
       <i class="fa-solid fa-arrow-up"></i>
       <svg class="back-to-top-progress" viewBox="0 0 40 40">
@@ -1301,7 +1219,7 @@
       </svg>
     </button>
 
-    <!-- ==================== LIGHTBOX MODAL ==================== -->
+    <!-- ==================== LIGHTBOX ==================== -->
     <div
       id="lightbox"
       class="lightbox"
@@ -1350,7 +1268,33 @@
       </div>
     </div>
 
-    <!-- External JavaScript -->
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <!-- script.js tetap dipanggil, dan kita tambahkan inline untuk efek tilt -->
     <script src="script.js"></script>
+    <script>
+      // ==================== MAGNETIC TILT EFFECT (untuk kartu menu & highlight) ====================
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".menu-card, .highlight-card");
+        cards.forEach((card) => {
+          card.addEventListener("mousemove", function (e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateY = ((x - centerX) / centerX) * 8;
+            const rotateX = ((centerY - y) / centerY) * 8;
+            this.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            this.style.transition = "none";
+          });
+          card.addEventListener("mouseleave", function () {
+            this.style.transform =
+              "perspective(800px) rotateX(0) rotateY(0) scale(1)";
+            this.style.transition =
+              "transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
